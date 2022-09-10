@@ -1,0 +1,1752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Docs - Magnet | PRNT</title>
+        <link rel="stylesheet" href="/assets/css/style.css">
+    </head>
+<body class="site">
+  <header class="site-header">
+            <nav class="navbar bg-faded">
+                <div class="navbar-toggleable container">
+                    <a href="/" class="navbar-brand">PRNT</a>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item">
+                            <a href="/portfolio" class="nav-link">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/docs" class="nav-link">Documentation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/#about" class="nav-link">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <section class="jumbotron jumbotron-fluid bg-faded text-center">
+                <div class="container">
+                    <h1>Magnet</h1>
+                    <p class="lead text-muted">Magnet is a Vanilla JavaScript library and a jQuery plugin to <br /> create gapless, filterable and sortable layouts.</p>
+                    <a href="http://goo.gl/Y9WUw4" class="btn btn-lg btn-link">Buy ❯</a>
+                </div>
+            </section>
+        </header>
+  <main class="site-content">
+    <div class="container py-2">
+      <div class="row flex-items-xs-between">
+        <article class="col-md-7">
+          <h2 id="methods">Methods</h2>
+          <p class="lead">Methods are actions that take place on Magnet instances.</p>
+          <p>jQuery methods follow the jQuery UI pattern <code>.magnet('methodName', /* arguments */)</code>;</p>
+<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.grid&#39;</span><span class="p">).</span><span class="nx">magnet</span><span class="p">()</span>
+  <span class="p">.</span><span class="nx">magnet</span><span class="p">(</span><span class="s1">&#39;hide&#39;</span><span class="p">,</span> <span class="nx">elem</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">magnet</span><span class="p">(</span><span class="s1">&#39;layout&#39;</span><span class="p">)</span>
+  <span class="c1">//Chaining is broken by methods that return values</span>
+  <span class="p">.</span><span class="nx">magnet</span><span class="p">(</span><span class="s1">&#39;getFilteredItems&#39;</span><span class="p">);</span>
+</pre></div>
+          <p>Vanilla javascript methods follow the pattern <code>magnet.methodName(/* arguments */)</code>, but they cannot be chained.</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">elem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.grid&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">mgnt</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Magnet</span><span class="p">(</span><span class="nx">elem</span><span class="p">);</span>
+<span class="nx">mgnt</span><span class="p">.</span><span class="nx">hide</span><span class="p">(</span><span class="nx">elem</span><span class="p">);</span>
+<span class="nx">mgnt</span><span class="p">.</span><span class="nx">layout</span><span class="p">();</span>
+<span class="nx">mgnt</span><span class="p">.</span><span class="nx">getFilteredItems</span><span class="p">();</span>
+</pre></div>
+          <h3 id="arrange-and-layout">Arrange and layout</h3>
+          <h4 id="arrange">arrange</h4>
+          <p><code>Arguments: Yes</code> <code>Type: Object</code></p>
+          <p>Filters, sorts and lays out items. Accepts an option object as an argument to apply filtering and sorting.</p>
+<div class="highlight"><pre><span class="c1">//jQuery</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.grid&#39;</span><span class="p">).</span><span class="nx">magnet</span><span class="p">(</span><span class="s1">&#39;arrange&#39;</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+<span class="c1">//Arrange is the main method of Magnet</span>
+<span class="c1">//Both lines produce the same result</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.grid&#39;</span><span class="p">).</span><span class="nx">magnet</span><span class="p">(</span><span class="nx">options</span><span class="p">);</span>
+<span class="c1">//vanilla JS</span>
+<span class="nx">mgnt</span><span class="p">.</span><span class="nx">arrange</span><span class="p">(</span><span class="nx">options</span><span class="p">);</span>
+</pre></div>
+          <button class="btn btn-outline-primary btn-arrange mb-1">Arrange</button>
+          <div class="periodic-table">
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Hydrogenium</span>
+              <span class="number">1</span>
+              <span class="symbol">H</span>
+              <span class="weight">1.008</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Helium</span>
+              <span class="number">2</span>
+              <span class="symbol">He</span>
+              <span class="weight">4.002</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Lithium</span>
+              <span class="number">3</span>
+              <span class="symbol">Li</span>
+              <span class="weight">6.94</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Beryllium</span>
+              <span class="number">4</span>
+              <span class="symbol">Be</span>
+              <span class="weight">9.012</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Borium</span>
+              <span class="number">5</span>
+              <span class="symbol">B</span>
+              <span class="weight">10.81</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Carbonium</span>
+              <span class="number">6</span>
+              <span class="symbol">C</span>
+              <span class="weight">12.011</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Nitrogenium</span>
+              <span class="number">7</span>
+              <span class="symbol">N</span>
+              <span class="weight">14.007</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Oxygenium</span>
+              <span class="number">8</span>
+              <span class="symbol">O</span>
+              <span class="weight">15.999</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Fluorum</span>
+              <span class="number">9</span>
+              <span class="symbol">F</span>
+              <span class="weight">18.998</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Neon</span>
+              <span class="number">10</span>
+              <span class="symbol">Ne</span>
+              <span class="weight">20.179</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Natrium</span>
+              <span class="number">11</span>
+              <span class="symbol">Na</span>
+              <span class="weight">22.989</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Magnesium</span>
+              <span class="number">12</span>
+              <span class="symbol">Mg</span>
+              <span class="weight">24.305</span>
+            </div>
+          </div>
+
+          <h4 id="layout">layout</h4>
+          <p><code>Arguments: No</code></p>
+          <p>Lays out all items. Refreshes the layout, if an item has changed size and items need to be laid out again.</p>
+<div class="highlight"><pre><span class="c1">//jQuery</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.grid&#39;</span><span class="p">).</span><span class="nx">magnet</span><span class="p">(</span><span class="s1">&#39;layout&#39;</span><span class="p">);</span>
+<span class="c1">//vanilla JS</span>
+<span class="nx">mgnt</span><span class="p">.</span><span class="nx">layout</span><span class="p">();</span>
+</pre></div>
+          <button class="btn btn-outline-primary btn-layout mb-1">Layout</button>
+          <p class="text-muted">Click item to change size</p>
+          <div class="periodic-table item-resizable">
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Hydrogenium</span>
+              <span class="number">1</span>
+              <span class="symbol">H</span>
+              <span class="weight">1.008</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Helium</span>
+              <span class="number">2</span>
+              <span class="symbol">He</span>
+              <span class="weight">4.002</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Lithium</span>
+              <span class="number">3</span>
+              <span class="symbol">Li</span>
+              <span class="weight">6.94</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Beryllium</span>
+              <span class="number">4</span>
+              <span class="symbol">Be</span>
+              <span class="weight">9.012</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Borium</span>
+              <span class="number">5</span>
+              <span class="symbol">B</span>
+              <span class="weight">10.81</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Carbonium</span>
+              <span class="number">6</span>
+              <span class="symbol">C</span>
+              <span class="weight">12.011</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Nitrogenium</span>
+              <span class="number">7</span>
+              <span class="symbol">N</span>
+              <span class="weight">14.007</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Oxygenium</span>
+              <span class="number">8</span>
+              <span class="symbol">O</span>
+              <span class="weight">15.999</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Fluorum</span>
+              <span class="number">9</span>
+              <span class="symbol">F</span>
+              <span class="weight">18.998</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Neon</span>
+              <span class="number">10</span>
+              <span class="symbol">Ne</span>
+              <span class="weight">20.179</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Natrium</span>
+              <span class="number">11</span>
+              <span class="symbol">Na</span>
+              <span class="weight">22.989</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Magnesium</span>
+              <span class="number">12</span>
+              <span class="symbol">Mg</span>
+              <span class="weight">24.305</span>
+            </div>
+          </div>
+
+          <h4 id="layoutitems">layoutItems</h4>
+          <p><code>Arguments: Yes</code> <code>Type: Array of Items, Boolean</code></p>
+          <p>Lays out specified items.</p>
+<div class="highlight"><pre><span class="c1">//jQuery</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.grid&#39;</span><span class="p">).</span><span class="nx">magnet</span><span class="p">(</span><span class="s1">&#39;layoutItems&#39;</span><span class="p">,</span> <span class="nx">items</span><span class="p">,</span> <span class="nx">instant</span><span class="p">);</span>
+<span class="c1">//vanilla JS</span>
+<span class="nx">mgnt</span><span class="p">.</span><span class="nx">layout</span><span class="p">(</span><span class="nx">items</span><span class="p">,</span> <span class="nx">instant</span><span class="p">);</span>
+</pre></div>
+          <button class="btn btn-outline-primary btn-layout-items mb-1">Layout items</button>
+          <div class="periodic-table">
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Hydrogenium</span>
+              <span class="number">1</span>
+              <span class="symbol">H</span>
+              <span class="weight">1.008</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Helium</span>
+              <span class="number">2</span>
+              <span class="symbol">He</span>
+              <span class="weight">4.002</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Lithium</span>
+              <span class="number">3</span>
+              <span class="symbol">Li</span>
+              <span class="weight">6.94</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Beryllium</span>
+              <span class="number">4</span>
+              <span class="symbol">Be</span>
+              <span class="weight">9.012</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Borium</span>
+              <span class="number">5</span>
+              <span class="symbol">B</span>
+              <span class="weight">10.81</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Carbonium</span>
+              <span class="number">6</span>
+              <span class="symbol">C</span>
+              <span class="weight">12.011</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Nitrogenium</span>
+              <span class="number">7</span>
+              <span class="symbol">N</span>
+              <span class="weight">14.007</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Oxygenium</span>
+              <span class="number">8</span>
+              <span class="symbol">O</span>
+              <span class="weight">15.999</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Fluorum</span>
+              <span class="number">9</span>
+              <span class="symbol">F</span>
+              <span class="weight">18.998</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Neon</span>
+              <span class="number">10</span>
+              <span class="symbol">Ne</span>
+              <span class="weight">20.179</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Natrium</span>
+              <span class="number">11</span>
+              <span class="symbol">Na</span>
+              <span class="weight">22.989</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Magnesium</span>
+              <span class="number">12</span>
+              <span class="symbol">Mg</span>
+              <span class="weight">24.305</span>
+            </div>
+          </div>
+
+          <h4 id="updatesortdata">updateSortData</h4>
+          <p><code>Arguments: No</code></p>
+          <p>Updates sort data.</p>
+<div class="highlight"><pre><span class="c1">//jQuery</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.grid&#39;</span><span class="p">).</span><span class="nx">magnet</span><span class="p">(</span><span class="s1">&#39;updateSortData&#39;</span><span class="p">);</span>
+<span class="c1">//vanilla JS</span>
+<span class="nx">mgnt</span><span class="p">.</span><span class="nx">updateSortData</span><span class="p">();</span>
+</pre></div>
+          <button class="btn btn-outline-primary btn-update-sort-data mb-1">Update</button>
+          <div class="periodic-table">
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Hydrogenium</span>
+              <span class="number">1</span>
+              <span class="symbol">H</span>
+              <span class="weight">1.008</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Helium</span>
+              <span class="number">2</span>
+              <span class="symbol">He</span>
+              <span class="weight">4.002</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Lithium</span>
+              <span class="number">3</span>
+              <span class="symbol">Li</span>
+              <span class="weight">6.94</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Beryllium</span>
+              <span class="number">4</span>
+              <span class="symbol">Be</span>
+              <span class="weight">9.012</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Borium</span>
+              <span class="number">5</span>
+              <span class="symbol">B</span>
+              <span class="weight">10.81</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Carbonium</span>
+              <span class="number">6</span>
+              <span class="symbol">C</span>
+              <span class="weight">12.011</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Nitrogenium</span>
+              <span class="number">7</span>
+              <span class="symbol">N</span>
+              <span class="weight">14.007</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Oxygenium</span>
+              <span class="number">8</span>
+              <span class="symbol">O</span>
+              <span class="weight">15.999</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Fluorum</span>
+              <span class="number">9</span>
+              <span class="symbol">F</span>
+              <span class="weight">18.998</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Neon</span>
+              <span class="number">10</span>
+              <span class="symbol">Ne</span>
+              <span class="weight">20.179</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Natrium</span>
+              <span class="number">11</span>
+              <span class="symbol">Na</span>
+              <span class="weight">22.989</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Magnesium</span>
+              <span class="number">12</span>
+              <span class="symbol">Mg</span>
+              <span class="weight">24.305</span>
+            </div>
+          </div>
+
+
+          <h4 id="shuffle">shuffle</h4>
+          <p><code>Arguments: No</code></p>
+          <p>Lays out items in a random order.</p>
+<div class="highlight"><pre><span class="c1">//jQuery</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.grid&#39;</span><span class="p">).</span><span class="nx">magnet</span><span class="p">(</span><span class="s1">&#39;shuffle&#39;</span><span class="p">);</span>
+<span class="c1">//vanilla JS</span>
+<span class="nx">mgnt</span><span class="p">.</span><span class="nx">shuffle</span><span class="p">();</span>
+</pre></div>
+          <button class="btn btn-outline-primary btn-shuffle mb-1">Shuffle</button>
+          <div class="periodic-table">
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Hydrogenium</span>
+              <span class="number">1</span>
+              <span class="symbol">H</span>
+              <span class="weight">1.008</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Helium</span>
+              <span class="number">2</span>
+              <span class="symbol">He</span>
+              <span class="weight">4.002</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Lithium</span>
+              <span class="number">3</span>
+              <span class="symbol">Li</span>
+              <span class="weight">6.94</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Beryllium</span>
+              <span class="number">4</span>
+              <span class="symbol">Be</span>
+              <span class="weight">9.012</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Borium</span>
+              <span class="number">5</span>
+              <span class="symbol">B</span>
+              <span class="weight">10.81</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Carbonium</span>
+              <span class="number">6</span>
+              <span class="symbol">C</span>
+              <span class="weight">12.011</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Nitrogenium</span>
+              <span class="number">7</span>
+              <span class="symbol">N</span>
+              <span class="weight">14.007</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Oxygenium</span>
+              <span class="number">8</span>
+              <span class="symbol">O</span>
+              <span class="weight">15.999</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Fluorum</span>
+              <span class="number">9</span>
+              <span class="symbol">F</span>
+              <span class="weight">18.998</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Neon</span>
+              <span class="number">10</span>
+              <span class="symbol">Ne</span>
+              <span class="weight">20.179</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Natrium</span>
+              <span class="number">11</span>
+              <span class="symbol">Na</span>
+              <span class="weight">22.989</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Magnesium</span>
+              <span class="number">12</span>
+              <span class="symbol">Mg</span>
+              <span class="weight">24.305</span>
+            </div>
+          </div>
+
+          <h4 id="hide">hide</h4>
+          <p><code>Arguments: Yes</code> <code>Type: Element, NodeList, Array or jQuery Object</code></p>
+          <p>Hides items.</p>
+<div class="highlight"><pre><span class="c1">//jQuery</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.grid&#39;</span><span class="p">).</span><span class="nx">magnet</span><span class="p">(</span><span class="s1">&#39;hide&#39;</span><span class="p">,</span> <span class="nx">elements</span><span class="p">);</span>
+<span class="c1">//vanilla JS</span>
+<span class="nx">mgnt</span><span class="p">.</span><span class="nx">hide</span><span class="p">(</span><span class="nx">elements</span><span class="p">);</span>
+</pre></div>
+          <button class="btn btn-outline-primary btn-hide mb-1">Hide</button>
+          <div class="periodic-table">
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Hydrogenium</span>
+              <span class="number">1</span>
+              <span class="symbol">H</span>
+              <span class="weight">1.008</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Helium</span>
+              <span class="number">2</span>
+              <span class="symbol">He</span>
+              <span class="weight">4.002</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Lithium</span>
+              <span class="number">3</span>
+              <span class="symbol">Li</span>
+              <span class="weight">6.94</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Beryllium</span>
+              <span class="number">4</span>
+              <span class="symbol">Be</span>
+              <span class="weight">9.012</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Borium</span>
+              <span class="number">5</span>
+              <span class="symbol">B</span>
+              <span class="weight">10.81</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Carbonium</span>
+              <span class="number">6</span>
+              <span class="symbol">C</span>
+              <span class="weight">12.011</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Nitrogenium</span>
+              <span class="number">7</span>
+              <span class="symbol">N</span>
+              <span class="weight">14.007</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Oxygenium</span>
+              <span class="number">8</span>
+              <span class="symbol">O</span>
+              <span class="weight">15.999</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Fluorum</span>
+              <span class="number">9</span>
+              <span class="symbol">F</span>
+              <span class="weight">18.998</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Neon</span>
+              <span class="number">10</span>
+              <span class="symbol">Ne</span>
+              <span class="weight">20.179</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Natrium</span>
+              <span class="number">11</span>
+              <span class="symbol">Na</span>
+              <span class="weight">22.989</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Magnesium</span>
+              <span class="number">12</span>
+              <span class="symbol">Mg</span>
+              <span class="weight">24.305</span>
+            </div>
+          </div>
+
+          <h4 id="reveal">reveal</h4>
+          <p><code>Arguments: Yes</code> <code>Type: Element, NodeList, Array or jQuery Object</code></p>
+          <p>Reveals hidden items.</p>
+<div class="highlight"><pre><span class="c1">//jQuery</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.grid&#39;</span><span class="p">).</span><span class="nx">magnet</span><span class="p">(</span><span class="s1">&#39;reveal&#39;</span><span class="p">,</span> <span class="nx">elements</span><span class="p">);</span>
+<span class="c1">//vanilla JS</span>
+<span class="nx">mgnt</span><span class="p">.</span><span class="nx">reveal</span><span class="p">(</span><span class="nx">elements</span><span class="p">);</span>
+</pre></div>
+          <button class="btn btn-outline-primary btn-reveal mb-1">Reveal</button>
+          <div class="periodic-table filter-nonmetal">
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Hydrogenium</span>
+              <span class="number">1</span>
+              <span class="symbol">H</span>
+              <span class="weight">1.008</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Helium</span>
+              <span class="number">2</span>
+              <span class="symbol">He</span>
+              <span class="weight">4.002</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Lithium</span>
+              <span class="number">3</span>
+              <span class="symbol">Li</span>
+              <span class="weight">6.94</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Beryllium</span>
+              <span class="number">4</span>
+              <span class="symbol">Be</span>
+              <span class="weight">9.012</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Borium</span>
+              <span class="number">5</span>
+              <span class="symbol">B</span>
+              <span class="weight">10.81</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Carbonium</span>
+              <span class="number">6</span>
+              <span class="symbol">C</span>
+              <span class="weight">12.011</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Nitrogenium</span>
+              <span class="number">7</span>
+              <span class="symbol">N</span>
+              <span class="weight">14.007</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Oxygenium</span>
+              <span class="number">8</span>
+              <span class="symbol">O</span>
+              <span class="weight">15.999</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Fluorum</span>
+              <span class="number">9</span>
+              <span class="symbol">F</span>
+              <span class="weight">18.998</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Neon</span>
+              <span class="number">10</span>
+              <span class="symbol">Ne</span>
+              <span class="weight">20.179</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Natrium</span>
+              <span class="number">11</span>
+              <span class="symbol">Na</span>
+              <span class="weight">22.989</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Magnesium</span>
+              <span class="number">12</span>
+              <span class="symbol">Mg</span>
+              <span class="weight">24.305</span>
+            </div>
+          </div>
+
+          <h3 id="add-or-remove-items">Add or remove items</h3>
+          <h4 id="append">append</h4>
+          <p><code>Arguments: Yes</code> <code>Type: Element, NodeList, Array or jQuery Object</code></p>
+          <p>Adds and lays out elements as items to the end of the layout.</p>
+<div class="highlight"><pre><span class="c1">//jQuery</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.grid&#39;</span><span class="p">).</span><span class="nx">magnet</span><span class="p">(</span><span class="s1">&#39;append&#39;</span><span class="p">,</span> <span class="nx">elements</span><span class="p">);</span>
+<span class="c1">//vanilla JS</span>
+<span class="nx">mgnt</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">elements</span><span class="p">);</span>
+</pre></div>
+          <button class="btn btn-outline-primary btn-append mb-1">Append</button>
+          <div class="periodic-table">
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Hydrogenium</span>
+              <span class="number">1</span>
+              <span class="symbol">H</span>
+              <span class="weight">1.008</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Helium</span>
+              <span class="number">2</span>
+              <span class="symbol">He</span>
+              <span class="weight">4.002</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Lithium</span>
+              <span class="number">3</span>
+              <span class="symbol">Li</span>
+              <span class="weight">6.94</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Beryllium</span>
+              <span class="number">4</span>
+              <span class="symbol">Be</span>
+              <span class="weight">9.012</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Borium</span>
+              <span class="number">5</span>
+              <span class="symbol">B</span>
+              <span class="weight">10.81</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Carbonium</span>
+              <span class="number">6</span>
+              <span class="symbol">C</span>
+              <span class="weight">12.011</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Nitrogenium</span>
+              <span class="number">7</span>
+              <span class="symbol">N</span>
+              <span class="weight">14.007</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Oxygenium</span>
+              <span class="number">8</span>
+              <span class="symbol">O</span>
+              <span class="weight">15.999</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Fluorum</span>
+              <span class="number">9</span>
+              <span class="symbol">F</span>
+              <span class="weight">18.998</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Neon</span>
+              <span class="number">10</span>
+              <span class="symbol">Ne</span>
+              <span class="weight">20.179</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Natrium</span>
+              <span class="number">11</span>
+              <span class="symbol">Na</span>
+              <span class="weight">22.989</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Magnesium</span>
+              <span class="number">12</span>
+              <span class="symbol">Mg</span>
+              <span class="weight">24.305</span>
+            </div>
+          </div>
+
+          <h4 id="prepend">prepend</h4>
+          <p><code>Arguments: Yes</code> <code>Type: Element, NodeList, Array or jQuery Object</code></p>
+          <p>Adds and lays out elements as items to the beginning of the layout.</p>
+<div class="highlight"><pre><span class="c1">//jQuery</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.grid&#39;</span><span class="p">).</span><span class="nx">magnet</span><span class="p">(</span><span class="s1">&#39;prepend&#39;</span><span class="p">,</span> <span class="nx">elements</span><span class="p">);</span>
+<span class="c1">//vanilla JS</span>
+<span class="nx">mgnt</span><span class="p">.</span><span class="nx">prepend</span><span class="p">(</span><span class="nx">elements</span><span class="p">);</span>
+</pre></div>
+          <button class="btn btn-outline-primary btn-prepend mb-1">Prepend</button>
+          <div class="periodic-table">
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Nitrogenium</span>
+              <span class="number">7</span>
+              <span class="symbol">N</span>
+              <span class="weight">14.007</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Oxygenium</span>
+              <span class="number">8</span>
+              <span class="symbol">O</span>
+              <span class="weight">15.999</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Fluorum</span>
+              <span class="number">9</span>
+              <span class="symbol">F</span>
+              <span class="weight">18.998</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Neon</span>
+              <span class="number">10</span>
+              <span class="symbol">Ne</span>
+              <span class="weight">20.179</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Natrium</span>
+              <span class="number">11</span>
+              <span class="symbol">Na</span>
+              <span class="weight">22.989</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Magnesium</span>
+              <span class="number">12</span>
+              <span class="symbol">Mg</span>
+              <span class="weight">24.305</span>
+            </div>
+            <div class="element post-transition metal" data-category="post-transition">
+              <span class="name">Aluminium</span>
+              <span class="number">13</span>
+              <span class="symbol">Al</span>
+              <span class="weight">26.981</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Silicium</span>
+              <span class="number">14</span>
+              <span class="symbol">Si</span>
+              <span class="weight">28.085</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Phosphorus</span>
+              <span class="number">15</span>
+              <span class="symbol">P</span>
+              <span class="weight">30.973</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Sulphur</span>
+              <span class="number">16</span>
+              <span class="symbol">S</span>
+              <span class="weight">32.06</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Chlorum</span>
+              <span class="number">17</span>
+              <span class="symbol">Cl</span>
+              <span class="weight">35.45</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Argon</span>
+              <span class="number">18</span>
+              <span class="symbol">Ar</span>
+              <span class="weight">39.948</span>
+            </div>
+          </div>
+
+          <h4 id="additems">additems</h4>
+          <p><code>Arguments: Yes</code> <code>Type: Element, NodeList, Array or jQuery Object</code></p>
+          <p>Adds items to the layout, therefore to the instance. Items are not laid out.</p>
+<div class="highlight"><pre><span class="c1">//jQuery</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.grid&#39;</span><span class="p">).</span><span class="nx">magnet</span><span class="p">(</span><span class="s1">&#39;addItems&#39;</span><span class="p">,</span> <span class="nx">elements</span><span class="p">);</span>
+<span class="c1">//vanilla JS</span>
+<span class="nx">mgnt</span><span class="p">.</span><span class="nx">addItems</span><span class="p">(</span><span class="nx">elements</span><span class="p">);</span>
+</pre></div>
+          <button class="btn btn-outline-primary btn-add mb-1">Add</button>
+          <div class="periodic-table">
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Hydrogenium</span>
+              <span class="number">1</span>
+              <span class="symbol">H</span>
+              <span class="weight">1.008</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Helium</span>
+              <span class="number">2</span>
+              <span class="symbol">He</span>
+              <span class="weight">4.002</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Lithium</span>
+              <span class="number">3</span>
+              <span class="symbol">Li</span>
+              <span class="weight">6.94</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Beryllium</span>
+              <span class="number">4</span>
+              <span class="symbol">Be</span>
+              <span class="weight">9.012</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Borium</span>
+              <span class="number">5</span>
+              <span class="symbol">B</span>
+              <span class="weight">10.81</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Carbonium</span>
+              <span class="number">6</span>
+              <span class="symbol">C</span>
+              <span class="weight">12.011</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Nitrogenium</span>
+              <span class="number">7</span>
+              <span class="symbol">N</span>
+              <span class="weight">14.007</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Oxygenium</span>
+              <span class="number">8</span>
+              <span class="symbol">O</span>
+              <span class="weight">15.999</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Fluorum</span>
+              <span class="number">9</span>
+              <span class="symbol">F</span>
+              <span class="weight">18.998</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Neon</span>
+              <span class="number">10</span>
+              <span class="symbol">Ne</span>
+              <span class="weight">20.179</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Natrium</span>
+              <span class="number">11</span>
+              <span class="symbol">Na</span>
+              <span class="weight">22.989</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Magnesium</span>
+              <span class="number">12</span>
+              <span class="symbol">Mg</span>
+              <span class="weight">24.305</span>
+            </div>
+          </div>
+
+          <h4 id="insert">insert</h4>
+          <p><code>Arguments: Yes</code> <code>Type: Element, NodeList, Array or jQuery Object</code></p>
+          <p>Adds elements as items to the layout and filters, sorts and lays out items.</p>
+<div class="highlight"><pre><span class="c1">//jQuery</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.grid&#39;</span><span class="p">).</span><span class="nx">magnet</span><span class="p">(</span><span class="s1">&#39;insert&#39;</span><span class="p">,</span> <span class="nx">elements</span><span class="p">);</span>
+<span class="c1">//vanilla JS</span>
+<span class="nx">mgnt</span><span class="p">.</span><span class="nx">insert</span><span class="p">(</span><span class="nx">elements</span><span class="p">);</span>
+</pre></div>
+          <button class="btn btn-outline-primary btn-insert mb-1">Insert</button>
+          <div class="periodic-table sort-by-number">
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Hydrogenium</span>
+              <span class="number">1</span>
+              <span class="symbol">H</span>
+              <span class="weight">1.008</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Lithium</span>
+              <span class="number">3</span>
+              <span class="symbol">Li</span>
+              <span class="weight">6.94</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Borium</span>
+              <span class="number">5</span>
+              <span class="symbol">B</span>
+              <span class="weight">10.81</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Nitrogenium</span>
+              <span class="number">7</span>
+              <span class="symbol">N</span>
+              <span class="weight">14.007</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Oxygenium</span>
+              <span class="number">8</span>
+              <span class="symbol">O</span>
+              <span class="weight">15.999</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Fluorum</span>
+              <span class="number">9</span>
+              <span class="symbol">F</span>
+              <span class="weight">18.998</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Neon</span>
+              <span class="number">10</span>
+              <span class="symbol">Ne</span>
+              <span class="weight">20.179</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Natrium</span>
+              <span class="number">11</span>
+              <span class="symbol">Na</span>
+              <span class="weight">22.989</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Magnesium</span>
+              <span class="number">12</span>
+              <span class="symbol">Mg</span>
+              <span class="weight">24.305</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Silicium</span>
+              <span class="number">14</span>
+              <span class="symbol">Si</span>
+              <span class="weight">28.085</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Sulphur</span>
+              <span class="number">16</span>
+              <span class="symbol">S</span>
+              <span class="weight">32.06</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Argon</span>
+              <span class="number">18</span>
+              <span class="symbol">Ar</span>
+              <span class="weight">39.948</span>
+            </div>
+          </div>
+
+          <h4 id="remove">remove</h4>
+          <p><code>Arguments: Yes</code> <code>Type: Element, NodeList, Array or jQuery Object</code></p>
+          <p>Removes elements as items from the layout, therefore from the instance and DOM.</p>
+<div class="highlight"><pre><span class="c1">//jQuery</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.grid&#39;</span><span class="p">).</span><span class="nx">magnet</span><span class="p">(</span><span class="s1">&#39;remove&#39;</span><span class="p">,</span> <span class="nx">elements</span><span class="p">);</span>
+<span class="c1">//vanilla JS</span>
+<span class="nx">mgnt</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="nx">elements</span><span class="p">);</span>
+</pre></div>
+          <button class="btn btn-outline-primary btn-remove mb-1">Remove</button>
+          <div class="periodic-table">
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Hydrogenium</span>
+              <span class="number">1</span>
+              <span class="symbol">H</span>
+              <span class="weight">1.008</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Helium</span>
+              <span class="number">2</span>
+              <span class="symbol">He</span>
+              <span class="weight">4.002</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Lithium</span>
+              <span class="number">3</span>
+              <span class="symbol">Li</span>
+              <span class="weight">6.94</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Beryllium</span>
+              <span class="number">4</span>
+              <span class="symbol">Be</span>
+              <span class="weight">9.012</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Borium</span>
+              <span class="number">5</span>
+              <span class="symbol">B</span>
+              <span class="weight">10.81</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Carbonium</span>
+              <span class="number">6</span>
+              <span class="symbol">C</span>
+              <span class="weight">12.011</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Nitrogenium</span>
+              <span class="number">7</span>
+              <span class="symbol">N</span>
+              <span class="weight">14.007</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Oxygenium</span>
+              <span class="number">8</span>
+              <span class="symbol">O</span>
+              <span class="weight">15.999</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Fluorum</span>
+              <span class="number">9</span>
+              <span class="symbol">F</span>
+              <span class="weight">18.998</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Neon</span>
+              <span class="number">10</span>
+              <span class="symbol">Ne</span>
+              <span class="weight">20.179</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Natrium</span>
+              <span class="number">11</span>
+              <span class="symbol">Na</span>
+              <span class="weight">22.989</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Magnesium</span>
+              <span class="number">12</span>
+              <span class="symbol">Mg</span>
+              <span class="weight">24.305</span>
+            </div>
+          </div>
+
+          <h3 id="utilities">Utilities</h3>
+          <h4 id="reloaditems">reloadItems</h4>
+          <p><code>Arguments: No</code></p>
+          <p>Updates all items data. Applies changes made to the DOM to Magnet.</p>
+<div class="highlight"><pre><span class="c1">//jQuery</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.grid&#39;</span><span class="p">).</span><span class="nx">magnet</span><span class="p">(</span><span class="s1">&#39;reloadItems&#39;</span><span class="p">);</span>
+<span class="c1">//vanilla JS</span>
+<span class="nx">mgnt</span><span class="p">.</span><span class="nx">reloadItems</span><span class="p">();</span>
+</pre></div>
+          <button class="btn btn-outline-primary btn-reload-items mb-1">Reload</button>
+          <div class="periodic-table">
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Hydrogenium</span>
+              <span class="number">1</span>
+              <span class="symbol">H</span>
+              <span class="weight">1.008</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Helium</span>
+              <span class="number">2</span>
+              <span class="symbol">He</span>
+              <span class="weight">4.002</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Lithium</span>
+              <span class="number">3</span>
+              <span class="symbol">Li</span>
+              <span class="weight">6.94</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Beryllium</span>
+              <span class="number">4</span>
+              <span class="symbol">Be</span>
+              <span class="weight">9.012</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Borium</span>
+              <span class="number">5</span>
+              <span class="symbol">B</span>
+              <span class="weight">10.81</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Carbonium</span>
+              <span class="number">6</span>
+              <span class="symbol">C</span>
+              <span class="weight">12.011</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Nitrogenium</span>
+              <span class="number">7</span>
+              <span class="symbol">N</span>
+              <span class="weight">14.007</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Oxygenium</span>
+              <span class="number">8</span>
+              <span class="symbol">O</span>
+              <span class="weight">15.999</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Fluorum</span>
+              <span class="number">9</span>
+              <span class="symbol">F</span>
+              <span class="weight">18.998</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Neon</span>
+              <span class="number">10</span>
+              <span class="symbol">Ne</span>
+              <span class="weight">20.179</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Natrium</span>
+              <span class="number">11</span>
+              <span class="symbol">Na</span>
+              <span class="weight">22.989</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Magnesium</span>
+              <span class="number">12</span>
+              <span class="symbol">Mg</span>
+              <span class="weight">24.305</span>
+            </div>
+          </div>
+
+          <h4 id="getitem">getItem</h4>
+          <p><code>Arguments: Yes</code> <code>Type: Element</code> <code>Returns: Item</code></p>
+          <p>Returns an item from the layout.</p>
+<div class="highlight"><pre><span class="c1">//jQuery</span>
+<span class="kd">var</span> <span class="nx">item</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.grid&#39;</span><span class="p">).</span><span class="nx">magnet</span><span class="p">(</span><span class="s1">&#39;getItem&#39;</span><span class="p">,</span> <span class="nx">element</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">item</span><span class="p">);</span>
+<span class="c1">//vanilla JS</span>
+<span class="kd">var</span> <span class="nx">item</span> <span class="o">=</span> <span class="nx">mgnt</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="nx">element</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">item</span><span class="p">);</span>
+</pre></div>
+          <button class="btn btn-outline-primary btn-get-item mb-1">Get item</button>
+          <p class="text-muted">Open the console to view result</p>
+          <div class="periodic-table">
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Hydrogenium</span>
+              <span class="number">1</span>
+              <span class="symbol">H</span>
+              <span class="weight">1.008</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Helium</span>
+              <span class="number">2</span>
+              <span class="symbol">He</span>
+              <span class="weight">4.002</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Lithium</span>
+              <span class="number">3</span>
+              <span class="symbol">Li</span>
+              <span class="weight">6.94</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Beryllium</span>
+              <span class="number">4</span>
+              <span class="symbol">Be</span>
+              <span class="weight">9.012</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Borium</span>
+              <span class="number">5</span>
+              <span class="symbol">B</span>
+              <span class="weight">10.81</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Carbonium</span>
+              <span class="number">6</span>
+              <span class="symbol">C</span>
+              <span class="weight">12.011</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Nitrogenium</span>
+              <span class="number">7</span>
+              <span class="symbol">N</span>
+              <span class="weight">14.007</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Oxygenium</span>
+              <span class="number">8</span>
+              <span class="symbol">O</span>
+              <span class="weight">15.999</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Fluorum</span>
+              <span class="number">9</span>
+              <span class="symbol">F</span>
+              <span class="weight">18.998</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Neon</span>
+              <span class="number">10</span>
+              <span class="symbol">Ne</span>
+              <span class="weight">20.179</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Natrium</span>
+              <span class="number">11</span>
+              <span class="symbol">Na</span>
+              <span class="weight">22.989</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Magnesium</span>
+              <span class="number">12</span>
+              <span class="symbol">Mg</span>
+              <span class="weight">24.305</span>
+            </div>
+          </div>
+
+          <h4 id="getitems">getItems</h4>
+          <p><code>Arguments: Yes</code> <code>Type: Element, NodeList, Array or jQuery Object</code> <code>Returns: Array of Items</code></p>
+          <p>Returns an array of all items from the layout.</p>
+<div class="highlight"><pre><span class="c1">//jQuery</span>
+<span class="kd">var</span> <span class="nx">items</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.grid&#39;</span><span class="p">).</span><span class="nx">magnet</span><span class="p">(</span><span class="s1">&#39;getItem&#39;</span><span class="p">,</span> <span class="nx">elements</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">items</span><span class="p">);</span>
+<span class="c1">//vanilla JS</span>
+<span class="kd">var</span> <span class="nx">items</span> <span class="o">=</span> <span class="nx">mgnt</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="nx">elements</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">items</span><span class="p">);</span>
+</pre></div>
+          <button class="btn btn-outline-primary btn-get-items mb-1">Get items</button>
+          <p class="text-muted">Open the console to view result</p>
+          <div class="periodic-table">
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Hydrogenium</span>
+              <span class="number">1</span>
+              <span class="symbol">H</span>
+              <span class="weight">1.008</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Helium</span>
+              <span class="number">2</span>
+              <span class="symbol">He</span>
+              <span class="weight">4.002</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Lithium</span>
+              <span class="number">3</span>
+              <span class="symbol">Li</span>
+              <span class="weight">6.94</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Beryllium</span>
+              <span class="number">4</span>
+              <span class="symbol">Be</span>
+              <span class="weight">9.012</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Borium</span>
+              <span class="number">5</span>
+              <span class="symbol">B</span>
+              <span class="weight">10.81</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Carbonium</span>
+              <span class="number">6</span>
+              <span class="symbol">C</span>
+              <span class="weight">12.011</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Nitrogenium</span>
+              <span class="number">7</span>
+              <span class="symbol">N</span>
+              <span class="weight">14.007</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Oxygenium</span>
+              <span class="number">8</span>
+              <span class="symbol">O</span>
+              <span class="weight">15.999</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Fluorum</span>
+              <span class="number">9</span>
+              <span class="symbol">F</span>
+              <span class="weight">18.998</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Neon</span>
+              <span class="number">10</span>
+              <span class="symbol">Ne</span>
+              <span class="weight">20.179</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Natrium</span>
+              <span class="number">11</span>
+              <span class="symbol">Na</span>
+              <span class="weight">22.989</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Magnesium</span>
+              <span class="number">12</span>
+              <span class="symbol">Mg</span>
+              <span class="weight">24.305</span>
+            </div>
+          </div>
+
+          <h4 id="getitemselements">getItemsElements</h4>
+          <p><code>Arguments: No</code> <code>Returns: Array of Items</code></p>
+          <p>Returns an array of all items elements from the layout.</p>
+<div class="highlight"><pre><span class="c1">//jQuery</span>
+<span class="kd">var</span> <span class="nx">items</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.grid&#39;</span><span class="p">).</span><span class="nx">magnet</span><span class="p">(</span><span class="s1">&#39;getItemsElements&#39;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">items</span><span class="p">);</span>
+<span class="c1">//vanilla JS</span>
+<span class="kd">var</span> <span class="nx">items</span> <span class="o">=</span> <span class="nx">mgnt</span><span class="p">.</span><span class="nx">getItemsElements</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">items</span><span class="p">);</span>
+</pre></div>
+          <button class="btn btn-outline-primary btn-get-items-elements mb-1">Get elements</button>
+          <p class="text-muted">Open the console to view result</p>
+          <div class="periodic-table">
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Hydrogenium</span>
+              <span class="number">1</span>
+              <span class="symbol">H</span>
+              <span class="weight">1.008</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Helium</span>
+              <span class="number">2</span>
+              <span class="symbol">He</span>
+              <span class="weight">4.002</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Lithium</span>
+              <span class="number">3</span>
+              <span class="symbol">Li</span>
+              <span class="weight">6.94</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Beryllium</span>
+              <span class="number">4</span>
+              <span class="symbol">Be</span>
+              <span class="weight">9.012</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Borium</span>
+              <span class="number">5</span>
+              <span class="symbol">B</span>
+              <span class="weight">10.81</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Carbonium</span>
+              <span class="number">6</span>
+              <span class="symbol">C</span>
+              <span class="weight">12.011</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Nitrogenium</span>
+              <span class="number">7</span>
+              <span class="symbol">N</span>
+              <span class="weight">14.007</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Oxygenium</span>
+              <span class="number">8</span>
+              <span class="symbol">O</span>
+              <span class="weight">15.999</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Fluorum</span>
+              <span class="number">9</span>
+              <span class="symbol">F</span>
+              <span class="weight">18.998</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Neon</span>
+              <span class="number">10</span>
+              <span class="symbol">Ne</span>
+              <span class="weight">20.179</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Natrium</span>
+              <span class="number">11</span>
+              <span class="symbol">Na</span>
+              <span class="weight">22.989</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Magnesium</span>
+              <span class="number">12</span>
+              <span class="symbol">Mg</span>
+              <span class="weight">24.305</span>
+            </div>
+          </div>
+
+          <h4 id="getfiltereditems">getFilteredItems</h4>
+          <p><code>Arguments: No</code> <code>Returns: Array of Items</code></p>
+          <p>Returns an array of filtered items in the current order.</p>
+<div class="highlight"><pre><span class="c1">//jQuery</span>
+<span class="kd">var</span> <span class="nx">items</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.grid&#39;</span><span class="p">).</span><span class="nx">magnet</span><span class="p">(</span><span class="s1">&#39;getFilteredItems&#39;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">items</span><span class="p">);</span>
+<span class="c1">//vanilla JS</span>
+<span class="kd">var</span> <span class="nx">items</span> <span class="o">=</span> <span class="nx">mgnt</span><span class="p">.</span><span class="nx">getFilteredItems</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">items</span><span class="p">);</span>
+</pre></div>
+          <button class="btn btn-outline-primary btn-get-filtered-items mb-1">Get items</button>
+          <p class="text-muted">Open the console to view result</p>
+          <div class="periodic-table filter-nonmetal">
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Hydrogenium</span>
+              <span class="number">1</span>
+              <span class="symbol">H</span>
+              <span class="weight">1.008</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Helium</span>
+              <span class="number">2</span>
+              <span class="symbol">He</span>
+              <span class="weight">4.002</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Lithium</span>
+              <span class="number">3</span>
+              <span class="symbol">Li</span>
+              <span class="weight">6.94</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Beryllium</span>
+              <span class="number">4</span>
+              <span class="symbol">Be</span>
+              <span class="weight">9.012</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Borium</span>
+              <span class="number">5</span>
+              <span class="symbol">B</span>
+              <span class="weight">10.81</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Carbonium</span>
+              <span class="number">6</span>
+              <span class="symbol">C</span>
+              <span class="weight">12.011</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Nitrogenium</span>
+              <span class="number">7</span>
+              <span class="symbol">N</span>
+              <span class="weight">14.007</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Oxygenium</span>
+              <span class="number">8</span>
+              <span class="symbol">O</span>
+              <span class="weight">15.999</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Fluorum</span>
+              <span class="number">9</span>
+              <span class="symbol">F</span>
+              <span class="weight">18.998</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Neon</span>
+              <span class="number">10</span>
+              <span class="symbol">Ne</span>
+              <span class="weight">20.179</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Natrium</span>
+              <span class="number">11</span>
+              <span class="symbol">Na</span>
+              <span class="weight">22.989</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Magnesium</span>
+              <span class="number">12</span>
+              <span class="symbol">Mg</span>
+              <span class="weight">24.305</span>
+            </div>
+          </div>
+
+          <h4 id="getfiltereditemselements">getFilteredItemsElements</h4>
+          <p><code>Arguments: No</code> <code>Returns: Array of Items</code></p>
+          <p>Returns an array of filtered items elements in the current order.</p>
+<div class="highlight"><pre><span class="c1">//jQuery</span>
+<span class="kd">var</span> <span class="nx">items</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.grid&#39;</span><span class="p">).</span><span class="nx">magnet</span><span class="p">(</span><span class="s1">&#39;getFilteredItemsElements&#39;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">items</span><span class="p">);</span>
+<span class="c1">//vanilla JS</span>
+<span class="kd">var</span> <span class="nx">items</span> <span class="o">=</span> <span class="nx">mgnt</span><span class="p">.</span><span class="nx">getFilteredItemsElements</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">items</span><span class="p">);</span>
+</pre></div>
+          <button class="btn btn-outline-primary btn-get-filtered-items-elements mb-1">Get elements</button>
+          <p class="text-muted">Open the console to view result</p>
+          <div class="periodic-table filter-nonmetal">
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Hydrogenium</span>
+              <span class="number">1</span>
+              <span class="symbol">H</span>
+              <span class="weight">1.008</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Helium</span>
+              <span class="number">2</span>
+              <span class="symbol">He</span>
+              <span class="weight">4.002</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Lithium</span>
+              <span class="number">3</span>
+              <span class="symbol">Li</span>
+              <span class="weight">6.94</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Beryllium</span>
+              <span class="number">4</span>
+              <span class="symbol">Be</span>
+              <span class="weight">9.012</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Borium</span>
+              <span class="number">5</span>
+              <span class="symbol">B</span>
+              <span class="weight">10.81</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Carbonium</span>
+              <span class="number">6</span>
+              <span class="symbol">C</span>
+              <span class="weight">12.011</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Nitrogenium</span>
+              <span class="number">7</span>
+              <span class="symbol">N</span>
+              <span class="weight">14.007</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Oxygenium</span>
+              <span class="number">8</span>
+              <span class="symbol">O</span>
+              <span class="weight">15.999</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Fluorum</span>
+              <span class="number">9</span>
+              <span class="symbol">F</span>
+              <span class="weight">18.998</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Neon</span>
+              <span class="number">10</span>
+              <span class="symbol">Ne</span>
+              <span class="weight">20.179</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Natrium</span>
+              <span class="number">11</span>
+              <span class="symbol">Na</span>
+              <span class="weight">22.989</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Magnesium</span>
+              <span class="number">12</span>
+              <span class="symbol">Mg</span>
+              <span class="weight">24.305</span>
+            </div>
+          </div>
+
+          <h4 id="destroy">destroy</h4>
+          <p><code>Arguments: No</code></p>
+          <p>Removes all Magnet functionallity and returns the element back to its pre-initialization state.</p>
+<div class="highlight"><pre><span class="c1">//jQuery</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.grid&#39;</span><span class="p">).</span><span class="nx">magnet</span><span class="p">(</span><span class="s1">&#39;destroy&#39;</span><span class="p">);</span>
+<span class="c1">//vanilla JS</span>
+<span class="nx">mgnt</span><span class="p">.</span><span class="nx">destroy</span><span class="p">();</span>
+</pre></div>
+          <button class="btn btn-outline-primary btn-destroy mb-1">Disable</button>
+          <div class="periodic-table">
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Hydrogenium</span>
+              <span class="number">1</span>
+              <span class="symbol">H</span>
+              <span class="weight">1.008</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Helium</span>
+              <span class="number">2</span>
+              <span class="symbol">He</span>
+              <span class="weight">4.002</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Lithium</span>
+              <span class="number">3</span>
+              <span class="symbol">Li</span>
+              <span class="weight">6.94</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Beryllium</span>
+              <span class="number">4</span>
+              <span class="symbol">Be</span>
+              <span class="weight">9.012</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Borium</span>
+              <span class="number">5</span>
+              <span class="symbol">B</span>
+              <span class="weight">10.81</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Carbonium</span>
+              <span class="number">6</span>
+              <span class="symbol">C</span>
+              <span class="weight">12.011</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Nitrogenium</span>
+              <span class="number">7</span>
+              <span class="symbol">N</span>
+              <span class="weight">14.007</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Oxygenium</span>
+              <span class="number">8</span>
+              <span class="symbol">O</span>
+              <span class="weight">15.999</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Fluorum</span>
+              <span class="number">9</span>
+              <span class="symbol">F</span>
+              <span class="weight">18.998</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Neon</span>
+              <span class="number">10</span>
+              <span class="symbol">Ne</span>
+              <span class="weight">20.179</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Natrium</span>
+              <span class="number">11</span>
+              <span class="symbol">Na</span>
+              <span class="weight">22.989</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Magnesium</span>
+              <span class="number">12</span>
+              <span class="symbol">Mg</span>
+              <span class="weight">24.305</span>
+            </div>
+          </div>
+        </article>
+        <nav class="col-md-3 sidebar" id="sidebar">
+                        <ul class="nav sticky-top flex-column">
+          
+            <li class="nav-item">
+              <a class="nav-link" href="../getting-started">Getting Started</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../filter">Filter</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../sort">Sort</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../layout-modes">Layout Modes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../events">Events</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link active" href="../methods">Methods</a>
+              <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="#arrange-and-layout">Arrange and layout</a>
+                  <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="#arrange">arrange</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#layout">layout</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#layoutitems">layoutItems</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#updatesortdata">updateSortData</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#shuffle">shuffle</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#hide">hide</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reveal">reveal</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#add-or-remove-items">Add or remove items</a>
+                  <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="#append">append</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#prepend">prepend</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#additems">addItems</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#insert">insert</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#remove">remove</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#utilities">Utilities</a>
+                  <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="#reloaditems">reloadItems</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#getitem">getItem</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#getitems">getItems</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#getitemselements">getItemsElements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#getfiltereditems">getFilteredItems</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#getfiltereditemselements">getFilteredItemsElements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#destroy">destroy</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../options">Options</a>
+            </li>
+          </nav>
+        <nav class="col-md-3 sidebar" id="sidebar">
+                        <ul class="nav sticky-top flex-column">
+      </div>
+    </div>
+  </main>
+  <script src="/assets/js/jquery-3.2.0.min.js"></script>
+        <script src="/assets/js/tether.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>
+        <script src="/assets/js/magnet.min.js"></script>
+        <script src="/assets/js/magnet-docs.min.js"></script>
+        <script src="/assets/js/application.js"></script>
+        <footer class="site-footer text-muted">
+            <div class="container">
+                <p>Currently v.2.0.0</p>
+                <p>Designed &amp; Developed by Jon Pariente</p>
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> PRNT. All rights reserved.</p>
+            </div>
+        </footer>
+</body>
+</html>

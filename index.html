@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PRNT</title>
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+    <body class="site">
+        <header class="site-header">
+            <nav class="navbar bg-faded">
+                <div class="navbar-toggleable container">
+                    <a href="/" class="navbar-brand">PRNT</a>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item">
+                            <a href="./portfolio" class="nav-link">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./docs" class="nav-link">Documentation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./#about" class="nav-link">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="jumbotron jumbotron-fluid bg-faded text-center">
+                <div class="container py-2">
+                    <h1 class="display-2">Less is more</h1>
+                </div>
+            </div>
+        </header>
+        <main class="site-content">
+            <div class="container py-3">
+                <div class="row">
+                    <div class="col-md text-center">
+                        <img class="mb-1 icon icon-lg" src="assets/img/icon-web-design.svg" />
+                        <h4>Design</h4>
+                        <p class="mb-0 text-muted">Love to design with minimalism in mind, creating layouts with a wide range of neutral colors.</p>
+                    </div>
+                    <div class="col-md text-center">
+                        <img class="mb-1 icon icon-lg" src="assets/img/icon-coding.svg" />
+                        <h4>Front-end development</h4>
+                        <p class="mb-0 text-muted">Pixel-perfect designs writing code to look the same as the source.</p>
+                    </div>
+                    <div class="col-md text-center">
+                        <img class="mb-1 icon icon-lg" src="assets/img/icon-illustration.svg" />
+                        <h4>Graphics</h4>
+                        <p class="mb-0 text-muted">Like to draw 2d and 3d graphics in spare time. Done some work here and there just for fun.</p>
+                    </div>
+                </div>
+            </div>
+            <section class="bg-faded text-center mb-2 py-2">
+                <div class="container">
+                    <h2 class="mb-1">Recent works</h2>
+                    <div class="row mb-1">
+                        <div class="col-md">
+                            <div class="card">
+                                <img class="card-img-top img-fluid" src="./assets/img/magnet-b-960x560.png" alt="Magnet">
+                                <div class="card-block">
+                                    <h4 class="card-title">Magnet</h4>
+                                    <p class="card-text">A bin-packing algorithm JavaScript library and jQuery plugin to create gapless, filterable and sortable layouts.</p>
+                                    <a href="./portfolio/magnet" class="card-link">View</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <div class="card">
+                                <img class="card-img-top img-fluid" src="./assets/img/tiempo-b-960x560.png" alt="magnet">
+                                <div class="card-block">
+                                    <h4 class="card-title">Tiempo</h4>
+                                    <p class="card-text">Clean and minimal responsive under construction/coming soon HTML5 template.</p>
+                                    <a href="./portfolio/tiempo" class="card-link">View</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <div class="card">
+                                <img class="card-img-top img-fluid" src="./assets/img/ristretto-y-960x560.png" alt="magnet">
+                                <div class="card-block">
+                                    <h4 class="card-title">Ristretto</h4>
+                                    <p class="card-text">A minimalist and elegant under construction template designed to fill the screen.</p>
+                                    <a href="./portfolio/ristretto" class="card-link">View</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <div class="card">
+                                <img class="card-img-top img-fluid" src="./assets/img/flat960x560.png" alt="Flat">
+                                <div class="card-block">
+                                    <h4 class="card-title">Flat</h4>
+                                    <p class="card-text">A flat-styled Bootstrap responsive navbar, that includes submenus and off-canvas menu.</p>
+                                    <a href="./portfolio/flat" class="card-link">View</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="./portfolio" class="btn btn-outline-primary">View all</a>
+                </div>
+            </section>
+            <section class="mb-2" id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md">
+                            <h4>About</h4>
+                            <p class="text-muted">I’m a freelance web designer and front-end developer based in San Sebastián, Spain. I’m a professional and a passionate worker, I love the work I do. Constantly learning and evolving, watching for latest trends and best practices.</p>
+                        </div>
+                        <div class="col-md">
+                            <h4>Contact</h4>
+                            <p class="lead text-muted">For any enqueries or to just say hello, send a message.</p>
+                            <form action="assets/php/contact.php" method="POST">
+                                <div class="row">
+                                    <div class="form-group col-md">
+                                        <input type="text" class="form-control" id="name" autocomplete="off">
+                                        <label for="name">Name</label>
+                                    </div>
+                                    <div class="form-group col-md">
+                                        <input type="email" class="form-control" id="email">
+                                        <label for="email">Email</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="message" id="message" rows="3" class="form-control"></textarea>
+                                    <label for="message">Message</label>
+                                </div>
+                                <button class="btn btn-outline-primary" type="submit">Send</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="site-footer text-muted">
+            <script src="assets/js/jquery-3.2.0.min.js"></script>
+            <script src="assets/js/application.js"></script>
+            <div class="container">
+                <p>Designed &amp; Developed by Jon Pariente</p>
+                <p>&copy;
+                    <script>document.write(new Date().getFullYear())</script> PRNT. All rights reserved.
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

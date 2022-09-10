@@ -1,0 +1,239 @@
+<!--
+TIEMPO 1.0.1
+HANDCRAFTED BY HAUNDO DESIGN
+http://haundodesign.com
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<title>Tiempo</title>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/tiempo.css">
+  <link rel="alternate stylesheet" href="css/light.css" id="light">
+  <link rel="stylesheet" href="css/dark.css" id="dark">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="images/tiempo-favicon.png">
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="js/jquery.mb.YTPlayer.js"></script>
+  <script src="js/tiempo.js"></script>
+</head>
+<body>
+  <!-- Loading screen -->
+  <div class="loading">
+    <span class="loading-icon">Loading...</span>
+  </div>
+  <!-- Filter -->
+  <div class="filter">
+    <span>Pattern</span>
+  </div>
+  <!-- Slider -->
+  <div class="slider">
+    <ul class="slide-list">
+      <li class="slide"></li>
+      <li class="slide"></li>
+      <li class="slide"></li>
+      <li class="slide"></li>
+    </ul>
+  </div>
+  <!-- Video -->
+  <div class="video-container">
+    <div id="video" class="player" data-property="{videoURL:'http://youtu.be/sBWPCvdv8Bk', containment:'.video-container',autoPlay:true, mute:true, showControls:false, showYTLogo:false, startAt:0, opacity:1}"></div>
+  </div>
+  <!-- Navigation -->
+  <nav id="menu" class="menu menu-close">
+    <a href="#" class="brand animated fadeIn delay-2s">
+      <img class="logo" src="images/tiempo.png" alt="Tiempo">
+      <img class="logo-retina" src="images/tiempo@2x.png" alt="Tiempo">
+    </a>
+    <button type="button" class="btn-menu animated fadeIn delay-2s" data-toggle="menu">
+      <span>Menu</span>
+    </button>
+    <ul class="menu-items">
+      <li data-toggle="modal-section" data-target="#newsletter">Newsletter</li>
+      <li data-toggle="modal-section" data-target="#about_us">About</li>
+      <li data-toggle="modal-section" data-target="#contact_us">Contact</li>
+    </ul>
+  </nav>
+  <!-- Content -->
+  <section id="content" class="container">
+    <div class="contentWrapper">
+      <div class="content">
+        <!-- Header -->
+        <header id="header">
+          <h1 class="title animated fadeInDown delay-5t">We are coming soon</h1>
+          <h4 class="description animated fadeInDown delay-1s">Our website is under construction, we are working very hard to give you the best experience. In the mean time, you can subscribe to get the latest updates.</h4>
+        </header>
+        <!-- Main -->
+        <main id="main">
+          <!-- Newsletter -->
+          <section id="newsletter" class="modal modal-close">
+            <button type="button" class="btn-menu" data-toggle="modal">
+              <span>Menu</span>
+            </button>
+            <div class="container">
+              <h3 class="title">Subscribe to our newsletter</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae diam ultricies diam dapibus lacinia eget ac sapien.</p>
+              <div class="row">
+                <div class="col-sm-6">
+                  <form id="subscribe" action="php/subscribe.php" method="post">
+                    <div class="input-group">
+                      <input type="text" class="form-control" name="subscriber_email" placeholder="Email">
+                      <span class="input-group-btn">
+                        <input type="submit" class="btn btn-lg" data-loading-text="Subscribing..." value="Subscribe">
+                      </span>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- About us -->
+          <section id="about_us" class="modal modal-close">
+            <button type="button" class="btn-menu" data-toggle="modal">
+              <span>Menu</span>
+            </button>
+            <div class="container">     
+              <h3 class="title">About us</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae diam ultricies diam dapibus lacinia eget ac sapien. Donec tincidunt nibh dictum elit varius auctor. Ut volutpat dignissim convallis. Aenean scelerisque condimentum ex sit amet convallis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris consectetur ultrices vestibulum. Ut lacus augue, posuere ac pretium vitae, pellentesque quis lorem. Proin vel neque non urna tincidunt posuere vel ut sapien. </p>
+              <div class="row services">
+                <div class="col-sm-4 service">
+                  <i class="fa fa-clock-o"></i>
+                  <p>Ut lacus augue, posuere ac pretium vitae, pellentesque quis lorem. Proin vel neque non urna tincidunt posuere vel ut sapien.</p>
+                </div>
+                <div class="col-sm-4 service">
+                  <i class="fa fa-heart-o"></i>
+                  <p>Ut lacus augue, posuere ac pretium vitae, pellentesque quis lorem. Proin vel neque non urna tincidunt posuere vel ut sapien.</p>
+                </div>
+                <div class="col-sm-4 service">
+                  <i class="fa fa-envelope-o"></i>
+                  <p>Ut lacus augue, posuere ac pretium vitae, pellentesque quis lorem. Proin vel neque non urna tincidunt posuere vel ut sapien.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Contact us -->
+          <section id="contact_us" class="modal modal-close">
+            <button type="button" class="btn-menu" data-toggle="modal">
+              <span>Menu</span>
+            </button>
+            <div class="container">
+              <h3 class="title">Contact us</h3>
+              <div class="row">
+                <div class="col-sm-6">
+                  <p>If you have any questions, comments, suggestions or just want to say &quot;hello&quot; we would to hear from you.</p>
+                  <ul>
+                    <li><i class="fa fa-map-marker"></i>12345 Street Name, City Name, Country</li>
+                    <li><i class="fa fa-phone"></i>0123-456-789</li>
+                    <li><i class="fa fa-envelope"></i><a href="mailto:haundodesign@haundodesign.com?subject=Hello" class="email">haundodesign@haundodesign.com</a></li>
+                    <li><i class="fa fa-globe"></i><a href="http://haundodesign.com">haundodesign.com</a></li>
+                  </ul>
+                  <ul class="list-inline">
+                    <li><a href="http://facebook.com"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="http://twitter.com"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="http://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="http://linkedin.com"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="http://behance.com"><i class="fa fa-behance"></i></a></li>
+                    <li><a href="http://dribbble.com"><i class="fa fa-dribbble"></i></a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-6">
+                  <form id="contact" action="php/contact.php" method="post">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <input type="text" class="form-control" name="name" placeholder="Name">
+                      </div>
+                      <div class="col-sm-6">
+                        <input type="text" class="form-control" name="email" placeholder="Email">
+                      </div>
+                      <div class="col-sm-12">
+                        <textarea name="message" class="form-control" placeholder="Message"></textarea>
+                        <input type="submit" class="btn btn-custom btn-lg" data-loading-text="Sending..." value="Send">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="countdown animated bounceIn delay-1s5t">
+            <canvas id="canvas"></canvas>
+            <div class="daysWrapper">
+              <h2 class="days"></h2>
+              <h4 class="daysText">Days</h4>
+            </div>
+            <div class="hoursWrapper">
+              <h2 class="hours"></h2>
+              <h4 class="hoursText">Hours</h4>
+            </div>
+            <div class="minutesWrapper">
+              <h2 class="minutes"></h2>
+              <h4 class="minutesText">Minutes</h4>
+            </div>
+            <div class="secondsWrapper">
+              <h2 class="seconds"></h2>
+              <h4 class="secondsText">Seconds</h4>
+            </div>
+          </section>
+        </main>
+        <!-- Footer -->
+        <!-- <footer id="footer" class="animated fadeIn delay-2s">
+          Copyright &copy; 2015 Haundo Design
+        </footer> -->
+      </div>
+    </div>
+  </section>
+  <!-- Control Panel -->
+  <div class="control-panel control-panel-close">
+    <div class="btn-control-panel">
+      <i class="fa fa-gear"></i>
+    </div>
+    <div class="control-panel-content">
+      <div class="control-panel-section skin-section">
+        <h6>Skin</h6>
+        <div class="btn-group skin">
+          <button type="button" class="btn btn-custom">Light</button>
+          <button type="button" class="btn btn-custom">Dark</button>
+        </div>
+      </div>
+      <div class="control-panel-section">
+        <h6>Background</h6>
+        <div class="btn-group bg">
+          <button type="button" class="btn btn-custom">Solid</button>
+          <button type="button" class="btn btn-custom">Image</button>
+          <button type="button" class="btn btn-custom">Slides</button>
+          <button type="button" class="btn btn-custom">Video</button>
+        </div>
+      </div>
+      <div class="control-panel-section">
+        <h6>Background Effect</h6>
+        <div class="btn-group bg-effect">
+          <button type="button" class="btn btn-custom">None</button>
+          <button type="button" class="btn btn-custom">Pattern</button>
+          <button type="button" class="btn btn-custom">Overlay</button>
+          <button type="button" class="btn btn-custom">Blur</button>
+        </div>
+      </div>
+      <div class="control-panel-section bg-color">
+        <h6>Background Color</h6>
+        <button type="button" class="btn btn-color btn-purple">Purple</button>
+        <button type="button" class="btn btn-color btn-blue">Blue</button>
+        <button type="button" class="btn btn-color btn-light-blue">Light-blue</button>
+        <button type="button" class="btn btn-color btn-light-green">Light-green</button>
+        <button type="button" class="btn btn-color btn-green">Green</button>
+        <button type="button" class="btn btn-color btn-yellow">Yellow</button>
+        <button type="button" class="btn btn-color btn-orange">Orange</button>
+        <button type="button" class="btn btn-color btn-red">Red</button>
+        <button type="button" class="btn btn-color btn-brown">Brown</button>
+        <button type="button" class="btn btn-color btn-black">Black</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

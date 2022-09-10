@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!--
+Ristretto - v.1.0.0
+Copyright 2016 by Haundo Design
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ristretto</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/assets/css/ristretto.css">
+  <link rel="stylesheet" href="/assets/css/ristretto-demo.css">
+  <link rel="shortcut icon" href="/assets/img/favicon.png">
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="/assets/js/ristretto.js"></script>
+  <script src="/assets/js/ristretto-demo.js"></script>
+</head>
+<body>
+  <!-- Nav -->
+  <nav>
+    <img class="brand" src="/assets/img/ristretto.png" srcset="/assets/img/ristretto.png 1x, /assets/img/ristretto@2x.png 2x" alt="brand">
+    <ul class="nav">
+      <li class="nav-item active"><a href="#" class="nav-link"><span class="icon icon-md icon-clock"></span>Countdown</a></li>
+      <li class="nav-item"><a href="#" class="nav-link"><span class="icon icon-md icon-info"></span>About</a></li>
+      <li class="nav-item"><a href="#" class="nav-link"><span class="icon icon-md icon-mail-open-text"></span>Subscribe</a></li>
+      <li class="nav-item"><a href="#" class="nav-link"><span class="icon icon-md icon-geolocalize"></span>Contact</a></li>
+    </ul>
+    <ul class="list-inline social-networks">
+      <li><a href="#"><span class="fa fa-twitter"><span class="hidden">Twitter</span></span></a></li>
+      <li><a href="#"><span class="fa fa-facebook"><span class="hidden">Facebook</span></span></a></li>
+      <li><a href="#"><span class="fa fa-dribbble"><span class="hidden">Dribbble</span></span></a></li>
+      <li><a href="#"><span class="fa fa-behance"><span class="hidden">Behance</span></span></a></li>
+      <li><a href="#"><span class="fa fa-google-plus"><span class="hidden">Google+</span></span></a></li>
+    </ul>
+  </nav>
+  <button class="btn btn-menu animated fadeIn"><span>Menu</span></button>
+  <!-- Header -->
+  <header>
+    <h2 class="hidden">Loading</h2>
+    <div class="loader">
+      <span class="circle animated spin infinite"></span>
+      <span class="circle animated spin infinite"></span>
+      <span class="circle animated spin infinite"></span>
+      <span class="circle animated spin infinite"></span>
+      <span class="circle animated spin infinite"></span>
+      <span class="circle animated spin infinite"></span>
+    </div>
+  </header>
+  <!-- Main -->
+  <main>
+    <!-- Countdown -->
+    <section class="container-fluid text-center">
+      <h1 class="animated fadeInUp">We are currently working hard on something new</h1>
+      <ul class="countdown list-inline animated fadeInUp" data-delay="300ms">
+        <li>
+          <span class="days">00</span>
+          <p class="days-ref">Days</p>
+        </li>
+        <li class="separator">.</li>
+        <li>
+          <span class="hours">00</span>
+          <p class="hours-ref">Hours</p>
+        </li>
+        <li class="separator">:</li>
+        <li>
+          <span class="minutes">00</span>
+          <p class="minutes-ref">Minutes</p>
+        </li>
+        <li class="separator">:</li>
+        <li>
+          <span class="seconds">00</span>
+          <p class="seconds-ref">Seconds</p>
+        </li>
+      </ul>
+    </section>
+    <!-- About -->
+    <section class="container hidden">
+      <h2 class="animated fadeInUp">About</h2>
+      <p class="m-b-lg animated fadeInUp" data-delay="300ms">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, laudantium maxime et deleniti ratione, possimus perspiciatis sint eius quam in deserunt est illum maiores totam tempora, vel qui quae dolorem cumque reiciendis. Sit praesentium tempore dicta nobis consequatur, ab deleniti reprehenderit, optio corporis aut, tempora in. Sint a, tenetur deserunt!</p>
+      <div class="row">
+        <div class="col-sm-4 text-center animated fadeInUp" data-delay="600ms">
+          <span class="icon icon-lg icon-webpage-img-txt m-b-sm"></span>
+          <h3>Service</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, impedit.</p>
+        </div>
+        <div class="col-sm-4 text-center animated fadeInUp" data-delay="900ms">
+          <span class="icon icon-lg icon-book-pencil m-b-sm"></span>
+          <h3>Service</h3>
+          <p>Voluptatum assumenda magnam aliquam quas, itaque fugiat ad id dolores!</p>
+        </div>
+        <div class="col-sm-4 text-center animated fadeInUp" data-delay="1200ms">
+          <span class="icon icon-lg icon-lightbulb m-b-sm"></span>
+          <h3>Service</h3>
+          <p>Distinctio sint eum porro molestiae blanditiis nesciunt sed aliquid labore.</p>
+        </div>
+      </div>
+    </section>
+    <!-- Subscribe -->
+    <section class="container hidden">
+      <h2 class="animated fadeInUp">Subscribe to our newsletter</h2>
+      <p class="animated fadeInUp" data-delay="300ms">We are working very hard on our website. Meanwhile, you can stay tuned by subscribing to our newsletter.</p>
+      <form class="animated fadeInUp" id="subscribe" action="php/subscribe.php" method="post" data-delay="600ms">
+        <div class="input-group">
+          <input class="form-control" id="newsletter" name="subscribe" type="email" autocomplete="off" required>
+          <label for="newsletter">Email</label>
+          <button class="btn btn-default" type="submit" data-loading="Subscribing">Subscribe</button>
+        </div>
+      </form>
+    </section>
+    <!-- Contact -->
+    <section class="container hidden">
+      <h2 class="animated fadeInUp">Contact us</h2>
+      <div class="row">
+        <div class="col-sm-6 animated fadeInUp" data-delay="300ms">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis optio quibusdam, voluptate ducimus vitae inventore.</p>
+          <address>
+            321 Fake Street<br>
+            Salt Lake City, UT 84121<br>
+            United States<br><br>
+            0123-456-789<br>
+            <a href="mailto:support@example.com">support@example.com</a><br>
+            <a href="#">exampledomain.com</a>
+          </address>
+        </div>
+        <div class="col-sm-6 text-center animated fadeInUp" data-delay="600ms">
+          <form id="contact" action="php/contact.php" method="post">
+            <div class="input-group m-b-lg">
+              <input class="form-control" id="name" name="name" type="text" autocomplete="off" required>
+              <label for="name">Name</label>
+            </div>
+            <div class="input-group m-b-lg">
+              <input class="form-control" id="email" name="email" type="email" autocomplete="off" required>
+              <label for="email">Email</label>
+            </div>
+            <div class="input-group m-b-lg">
+              <textarea class="form-control" id="message" name="message" required></textarea>
+              <label for="message">Message</label>
+            </div>
+            <button class="btn btn-default" type="submit" data-loading="Sending">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Aside -->
+  <aside class="panel control-panel">
+    <h2 class="hidden">Configuration</h2>
+    <section class="m-t-md m-b-lg">
+      <h3>Background</h3>
+      <p>Select the style for the background of the page</p>
+      <div class="radio-inline">
+        <input type="radio" id="radio-1" name="radios">
+        <label for="radio-1" data-background="image">Image</label>
+      </div>
+      <div class="radio-inline">
+        <input type="radio" id="radio-2" name="radios">
+        <label for="radio-2" data-background="slides">Slides</label>
+      </div>
+      <div class="radio-inline">
+        <input type="radio" id="radio-3" name="radios">
+        <label for="radio-3" data-background="video">Video</label>
+      </div>
+    </section>
+    <section>
+      <h3>Options</h3>
+      <p>Display a title on the main page.</p>
+      <div class="checkbox m-b">
+        <input type="checkbox" id="checkbox-1" name="checkbox-1">
+        <label for="checkbox-1" data-on="Enabled" data-off="Disabled"></label>
+      </div>
+      <p>Display text below each counter.</p>
+      <div class="checkbox">
+        <input type="checkbox" id="checkbox-2" name="checkbox-2">
+        <label for="checkbox-2" data-on="Enabled" data-off="Disabled"></label>
+      </div>
+    </section>
+  </aside>
+  <button class="btn btn-panel animated fadeIn"><span class="icon icon-md icon-gear"></span></button>
+  <!-- Video -->
+  <video class="player" loop muted>
+    <source src="/assets/video/lookup.webm" type="video/webm">
+    <source src="/assets/video/lookup.mp4" type="video/mp4">
+  </video>
+</body>
+</html>

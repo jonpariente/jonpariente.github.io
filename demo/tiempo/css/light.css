@@ -1,0 +1,169 @@
+/* 
+TIEMPO 1.0.1
+HANDCRAFTED BY HAUNDO DESIGN
+http://haundodesign.com
+
+COLOR SCHEME 
+------------
+#FFF - 0, 0%, 85%
+#121619
+------------
+#00B09C
+#205CA8
+#39B77F
+#8AABE2
+#82CEF1
+#9AD3B6
+#F9C72A
+#F0555C
+#F05E79
+#F05C4B
+
+BACKGROUND
+COLOR
+BORDER COLOR
+*/
+
+/* =BACKGROUND */
+  body {
+    background: #FFF;
+  }
+
+  .loading {
+    background-color: #FFF;
+  }
+
+  .menu,
+  .control-panel {
+    background: hsla(0, 0%, 85%, .7);
+  }
+
+  .modal {
+    background: hsla(0, 0%, 85%, .9);
+  }
+
+  .btn-menu span,
+  .btn-menu span:before,
+  .btn-menu span:after,
+  .btn-custom:hover,
+  .btn-custom.active,
+  .btn-custom:active,
+  .btn-custom:focus,
+  .loading-icon:after {
+    background: #121619;
+  }
+
+  .solid.purple,
+  .btn-purple {
+    background: #545386;
+  }
+
+  .solid.blue,
+  .btn-blue {
+    background: #205CA8;
+  }
+
+  .solid.light-blue,
+  .btn-light-blue {
+    background: #8AABE2;
+  }
+
+  .solid.light-green,
+  .btn-light-green {
+    background: #9AD3B6;
+  }
+
+  .solid.green,
+  .btn-green {
+    background: #00634F;
+  }
+
+  .solid.yellow,
+  .btn-yellow {
+    background: #F9C72A;
+  }
+
+  .solid.orange,
+  .btn-orange {
+    background: #E8733D;
+  }
+
+  .solid.red,
+  .btn-red {
+    background: #F0555C;
+  }
+
+  .solid.brown,
+  .btn-brown {
+    background: #333235;
+  }
+
+  .solid.black,
+  .btn-black {
+    background: #10181F;
+  }
+
+/* =COLOR */
+  body,
+  a,
+  a:link,
+  a:hover,
+  a:active,
+  a:visited,
+  a:focus,
+  .form-control,
+  .input-group-btn .btn {
+    color: #121619;
+  }
+
+  .form-control::-webkit-input-placeholder {
+    color: #121619;
+  }
+
+  .form-control:-moz-placeholder {
+    color: #121619;
+  }
+
+  .form-control::-moz-placeholder {
+    color: #121619;
+  }
+
+  .form-control:-ms-input-placeholder {
+    color: #121619;
+  }
+
+  .btn-custom:hover,
+  .btn-custom.active,
+  .btn-custom:active,
+  .btn-custom:focus {
+    color: #FFF;
+  }
+
+  .alert-success,
+  .alert-success .close {
+    color: #39B77F;
+  }
+
+  .alert-danger,
+  .alert-danger .close {
+    color: #F05C4B;
+  }
+
+  .service:first-child .fa {
+    color: #00B09C;
+  }
+
+  .service:nth-child(2) .fa {
+    color: #F05E79;
+  }
+
+  .service:last-child .fa {
+    color:  #82CEF1;
+  }
+
+/* =BORDER COLOR */
+  .btn-custom,
+  .form-control,
+  .input-group-btn {
+    border-color: #121619;
+  }

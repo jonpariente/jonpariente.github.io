@@ -1,0 +1,42 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+.container-fluid {
+    padding-inline: 0;
+}
+
+main {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100%;
+}
+
+.text-uppercase {
+    font-size: 10px;
+}
+
+.place-items-center {
+    place-items: center;
+}
+
+.btn {
+    border-radius: 0;
+    border-width: 2px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #000
+}
+
+.site-footer {
+    color: #000;
+}

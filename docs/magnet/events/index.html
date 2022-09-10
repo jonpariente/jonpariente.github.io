@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Haundo Design</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/jquery-3.1.1.min.js"></script>
+  <script src="/assets/js/script.js"></script>
+</head>
+<body class="site">
+  <header class="site-header">
+            <nav class="navbar bg-faded">
+                <div class="navbar-toggleable container">
+                    <a href="/" class="navbar-brand">PRNT</a>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item">
+                            <a href="/portfolio" class="nav-link">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/docs" class="nav-link">Documentation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/#about" class="nav-link">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <section class="jumbotron jumbotron-fluid bg-faded text-center">
+                <div class="container">
+                    <h1>Magnet</h1>
+                    <p class="lead text-muted">Magnet is a Vanilla JavaScript library and a jQuery plugin to <br /> create gapless, filterable and sortable layouts.</p>
+                    <a href="http://goo.gl/Y9WUw4" class="btn btn-lg btn-link">Buy ❯</a>
+                </div>
+            </section>
+        </header>
+  <main class="site-content">
+    <div class="container py-2">
+      <div class="row flex-items-xs-between">
+        <article class="col-md-7">
+          <h2 id="events">Events</h2>
+          <p class="lead">Magnet emits events on certain processes completion. This events can be emitted by the container or items.</p>
+          <h3 id="container">Container</h3>
+          <h4 id="arrangecomplete">arrangeComplete</h4>
+          <p>Triggers after all items have ended hide, reveal and layout transitions.</p>
+<div class="highlight"><pre><span class="c1">//jQuery</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.grid&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;arrangeComplete&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Arrange is completed&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="c1">//vanilla JS</span>
+<span class="kd">var</span> <span class="nx">elem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.grid&#39;</span><span class="p">);</span>
+<span class="nx">elem</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;arrangeComplete&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Arrange is completed&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div> 
+          <h4 id="layoutcomplete">layoutComplete</h4>
+          <p>Triggers after all items have ended layout transition.</p>
+<div class="highlight"><pre><span class="c1">//jQuery</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.grid&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;layoutComplete&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Layout is completed&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="c1">//vanilla JS</span>
+<span class="kd">var</span> <span class="nx">elem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.grid&#39;</span><span class="p">);</span>
+<span class="nx">elem</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;layoutComplete&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Layout is completed&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>   
+          <h4 id="revealcomplete">revealComplete</h4>
+          <p>Triggers after all items have ended reveal transition.</p>
+<div class="highlight"><pre><span class="c1">//jQuery</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.grid&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;revealComplete&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Reveal is completed&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="c1">//vanilla JS</span>
+<span class="kd">var</span> <span class="nx">elem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.grid&#39;</span><span class="p">);</span>
+<span class="nx">elem</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;revealComplete&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Reveal is completed&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+          <h4 id="hidecomplete">hideComplete</h4>
+          <p>Triggers after all items have ended reveal transition.</p>
+<div class="highlight"><pre><span class="c1">//jQuery</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.grid&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;hideComplete&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hide is completed&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="c1">//vanilla JS</span>
+<span class="kd">var</span> <span class="nx">elem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.grid&#39;</span><span class="p">);</span>
+<span class="nx">elem</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;hideComplete&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hide is completed&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+          <h4 id="removecomplete">removeComplete</h4>
+          <p>Triggers after all items have ended remove transition.</p>
+<div class="highlight"><pre><span class="c1">//jQuery</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.grid&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;removeComplete&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Remove is completed&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="c1">//vanilla JS</span>
+<span class="kd">var</span> <span class="nx">elem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.grid&#39;</span><span class="p">);</span>
+<span class="nx">elem</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;removeComplete&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Remove is completed&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+          <h3 id="items">Items</h3>
+          <h4 id="layout">layout</h4>
+          <p>Triggers after an item has been positioned on the layout and ended transition.</p>
+<div class="highlight"><pre><span class="c1">//jQuery</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.grid-item&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;layout&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Positioned &#39;</span> <span class="o">+</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="c1">//vanilla JS</span>
+<span class="kd">var</span> <span class="nx">elems</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;.grid-item&#39;</span><span class="p">);</span>
+<span class="nx">elems</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">elem</span><span class="p">){</span>
+  <span class="nx">elem</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;layout&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Positioned &#39;</span> <span class="o">+</span> <span class="nx">event</span><span class="p">.</span><span class="nx">currentTarget</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+          <h4 id="reveal">reveal</h4>
+          <p>Triggers after an item has been revealed in the layout and ended transition.</p>
+<div class="highlight"><pre><span class="c1">//jQuery</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.grid-item&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;reveal&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Revealed &#39;</span> <span class="o">+</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="c1">//vanilla JS</span>
+<span class="kd">var</span> <span class="nx">elems</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;.grid-item&#39;</span><span class="p">);</span>
+<span class="nx">elems</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">elem</span><span class="p">){</span>
+  <span class="nx">elem</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;layout&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Revealed &#39;</span> <span class="o">+</span> <span class="nx">event</span><span class="p">.</span><span class="nx">currentTarget</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+          <h4 id="hide">hide</h4>
+          <p>Triggers after an item has been hidden in the layout and ended transition.</p>
+<div class="highlight"><pre><span class="c1">//jQuery</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.grid-item&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;hide&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hidden &#39;</span> <span class="o">+</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="c1">//vanilla JS</span>
+<span class="kd">var</span> <span class="nx">elems</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;.grid-item&#39;</span><span class="p">);</span>
+<span class="nx">elems</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">elem</span><span class="p">){</span>
+  <span class="nx">elem</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;layout&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hidden &#39;</span> <span class="o">+</span> <span class="nx">event</span><span class="p">.</span><span class="nx">currentTarget</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+          <h4 id="remove">remove</h4>
+          <p>Triggers after an item has been removed from the layout and ended transition.</p>
+<div class="highlight"><pre><span class="c1">//jQuery</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.grid-item&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;remove&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Removed &#39;</span> <span class="o">+</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="c1">//vanilla JS</span>
+<span class="kd">var</span> <span class="nx">elems</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;.grid-item&#39;</span><span class="p">);</span>
+<span class="nx">elems</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">elem</span><span class="p">){</span>
+  <span class="nx">elem</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;layout&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Removed &#39;</span> <span class="o">+</span> <span class="nx">event</span><span class="p">.</span><span class="nx">currentTarget</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+          <h4 id="transition">transition</h4>
+          <p>Triggers after an item has ended a transition.</p>
+<div class="highlight mb-2"><pre><span class="c1">//jQuery</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.grid-item&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;transition&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Transition ended &#39;</span> <span class="o">+</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="c1">//vanilla JS</span>
+<span class="kd">var</span> <span class="nx">elems</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;.grid-item&#39;</span><span class="p">);</span>
+<span class="nx">elems</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">elem</span><span class="p">){</span>
+  <span class="nx">elem</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;layout&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Transition ended &#39;</span> <span class="o">+</span> <span class="nx">event</span><span class="p">.</span><span class="nx">currentTarget</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+        </article>
+        <nav class="col-md-3 sidebar" id="sidebar">
+                        <ul class="nav sticky-top flex-column">
+          
+            <li class="nav-item">
+              <a class="nav-link" href="../getting-started">Getting Started</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../filter">Filter</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../sort">Sort</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../layout-modes">Layout Modes</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link active" href="../events">Events</a>
+              <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="#container">Container</a>
+                  <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="#arrangecomplete">arrangeComplete</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#layoutcomplete">layoutComplete</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#revealcomplete">revealComplete</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#hidecomplete">hideComplete</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#removecomplete">removeComplete</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#items">Items</a>
+                  <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="#layout">layout</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reveal">reveal</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#hide">hide</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#remove">remove</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#transition">transition</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../methods">Methods</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../options">Options</a>
+            </li>
+          </nav>
+        <nav class="col-md-3 sidebar" id="sidebar">
+                        <ul class="nav sticky-top flex-column">
+      </div>
+    </div>
+  </main>
+  <script src="/assets/js/jquery-3.2.0.min.js"></script>
+        <script src="/assets/js/tether.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>
+        <script src="/assets/js/magnet.min.js"></script>
+        <script src="/assets/js/magnet-docs.min.js"></script>
+        <script src="/assets/js/application.js"></script>
+        <footer class="site-footer text-muted">
+            <div class="container">
+                <p>Currently v.2.0.0</p>
+                <p>Designed &amp; Developed by Jon Pariente</p>
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> PRNT. All rights reserved.</p>
+            </div>
+        </footer>
+</body>
+</html>

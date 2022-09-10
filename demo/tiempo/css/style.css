@@ -1,0 +1,27 @@
+/* 
+TIEMPO 1.0.1
+HANDCRAFTED BY HAUNDO DESIGN
+http://haundodesign.com
+*/
+
+/* =IMAGE */
+  .image {
+    background-image: url(../images/background4.jpg);
+  }
+
+/* =SLIDES */
+  .slide:nth-child(1) {
+    background-image: url(../images/background8.jpg);
+  }
+
+  .slide:nth-child(2) {
+    background-image: url(../images/background7.jpg);
+  }
+
+  .slide:nth-child(3) {
+    background-image: url(../images/background6.jpg);
+  }
+
+  .slide:nth-child(4) {
+    background-image: url(../images/background5.jpg);
+  }

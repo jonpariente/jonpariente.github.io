@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Demo - Magnet | PRNT</title>
+        <link rel="stylesheet" href="/assets/css/style.css">
+    </head>
+    <body class="demo magnet-demo">
+        <header>
+            <svg class="icon magnet-icon" viewBox="0 0 400 400" preserveAspectRatio="xMinYMin meet">
+                <path d="M179.49,215.37l14.86-85.58h-61.9L220.51,0.21,205.65,85.79h61.9Zm-31.94-93.58h56.3l-10.14,58.42,58.73-86.42h-56.3l10.14-58.42ZM396,400a4,4,0,0,1-4-4V13.28L290.75,108.91a4,4,0,1,1-5.49-5.82l108-102A4,4,0,0,1,400,4V396A4,4,0,0,1,396,400ZM4,400a4,4,0,0,1-4-4V4A4,4,0,0,1,6.75,1.09l108,102a4,4,0,1,1-5.49,5.82L8,13.28V396A4,4,0,0,1,4,400Z">
+            </svg>
+        </header>
+        <main>
+            <div class="container">
+                <div class="filter-group">
+                    <span class="text-uppercase">Filter by category:</span>
+                    <button class="btn btn-link active" data-filter="*">All</button>
+                    <button class="btn btn-link" data-filter=".metal">Metal</button>
+                    <button class="btn btn-link" data-filter=".metalloid">Metalloid</button>
+                    <button class="btn btn-link" data-filter=".nonmetal">Nonmetal</button>
+                    <a class="btn btn-link btn-destroy">Destroy</a>
+                </div>
+                <div class="periodic-table">
+                    <div class="element nonmetal gas" data-state="gas">
+                        <p class="symbol">H</p>
+                    </div>
+                    <div class="element noble-gas nonmetal gas" data-state="gas">
+                        <p class="symbol">He</p>
+                    </div>
+                    <div class="element alkali metal solid" data-state="solid">
+                        <p class="symbol">Li</p>
+                    </div>
+                    <div class="element alkaline-earth metal solid" data-state="solid">
+                        <p class="symbol">Be</p>
+                    </div>
+                    <div class="element metalloid solid" data-state="solid">
+                        <p class="symbol">B</p>
+                    </div>
+                    <div class="element nonmetal solid" data-state="solid">
+                        <p class="symbol">C</p>
+                    </div>
+                    <div class="element nonmetal gas" data-state="gas">
+                        <p class="symbol">N</p>
+                    </div>
+                    <div class="element nonmetal gas" data-state="gas">
+                        <p class="symbol">O</p>
+                    </div>
+                    <div class="element halogen nonmetal solid" data-state="gas">
+                        <p class="symbol">F</p>
+                    </div>
+                    <div class="element noble-gas nonmetal solid" data-state="gas">
+                        <p class="symbol">Ne</p>
+                    </div>
+                    <div class="element alkali metal solid" data-state="solid">
+                        <p class="symbol">Na</p>
+                    </div>
+                    <div class="element alkaline-earth metal solid" data-state="solid">
+                        <p class="symbol">Mg</p>
+                    </div>
+                    <div class="element post-transition metal solid" data-state="solid">
+                        <p class="symbol">Al</p>
+                    </div>
+                    <div class="element metalloid solid" data-state="solid">
+                        <p class="symbol">Si</p>
+                    </div>
+                    <div class="element nonmetal solid" data-state="solid">
+                        <p class="symbol">P</p>
+                    </div>
+                    <div class="element nonmetal solid" data-state="solid">
+                        <p class="symbol">S</p>
+                    </div>
+                    <div class="element halogen nonmetal gas" data-state="gas">
+                        <p class="symbol">Cl</p>
+                    </div>
+                    <div class="element noble-gas nonmetal gas" data-state="gas">
+                        <p class="symbol">Ar</p>
+                    </div>
+                    <div class="element alkali metal solid" data-state="solid">
+                        <p class="symbol">K</p>
+                    </div>
+                    <div class="element alkaline-earth metal solid" data-state="solid">
+                        <p class="symbol">Ca</p>
+                    </div>
+                    <div class="element transition metal solid" data-state="solid">
+                        <p class="symbol">Sc</p>
+                    </div>
+                    <div class="element transition metal solid" data-state="solid">
+                        <p class="symbol">Ti</p>
+                    </div>
+                    <div class="element transition metal solid" data-state="solid">
+                        <p class="symbol">V</p>
+                    </div>
+                    <div class="element transition metal solid" data-state="solid">
+                        <p class="symbol">Cr</p>
+                    </div>
+                    <div class="element transition metal solid" data-state="solid">
+                        <p class="symbol">Mn</p>
+                    </div>
+                    <div class="element transition metal solid" data-state="solid">
+                        <p class="symbol">Fe</p>
+                    </div>
+                    <div class="element transition metal solid" data-state="solid">
+                        <p class="symbol">Co</p>
+                    </div>
+                    <div class="element transition metal solid" data-state="solid">
+                        <p class="symbol">Ni</p>
+                    </div>
+                    <div class="element transition metal solid" data-state="solid">
+                        <p class="symbol">Cu</p>
+                    </div>
+                    <div class="element transition metal solid" data-state="solid">
+                        <p class="symbol">Zn</p>
+                    </div>
+                    <div class="element post-transition metal solid" data-state="solid">
+                        <p class="symbol">Ga</p>
+                    </div>
+                    <div class="element metalloid solid" data-state="solid">
+                        <p class="symbol">Ge</p>
+                    </div>
+                    <div class="element metalloid solid" data-state="solid">
+                        <p class="symbol">As</p>
+                    </div>
+                    <div class="element nonmetal solid" data-state="solid">
+                        <p class="symbol">Se</p>
+                    </div>
+                    <div class="element halogen nonmetal liquid" data-state="liquid">
+                        <p class="symbol">Br</p>
+                    </div>
+                    <div class="element noble-gas nonmetal gas" data-state="gas">
+                        <p class="symbol">Kr</p>
+                    </div>
+                    <div class="element alkali metal solid" data-state="solid">
+                        <p class="symbol">Rb</p>
+                    </div>
+                    <div class="element alkaline-earth metal solid" data-state="solid">
+                        <p class="symbol">Sr</p>
+                    </div>
+                    <div class="element transition metal solid" data-state="solid">
+                        <p class="symbol">Y</p>
+                    </div>
+                    <div class="element transition metal solid" data-state="solid">
+                        <p class="symbol">Zr</p>
+                    </div>
+                    <div class="element transition metal solid" data-state="solid">
+                        <p class="symbol">Nb</p>
+                    </div>
+                    <div class="element transition metal solid" data-state="solid">
+                        <p class="symbol">Mo</p>
+                    </div>
+                    <div class="element transition metal solid" data-state="solid">
+                        <p class="symbol">Tc</p>
+                    </div>
+                    <div class="element transition metal solid" data-state="solid">
+                        <p class="symbol">Ru</p>
+                    </div>
+                    <div class="element transition metal solid" data-state="solid">
+                        <p class="symbol">Rh</p>
+                    </div>
+                    <div class="element transition metal solid" data-state="solid">
+                        <p class="symbol">Pd</p>
+                    </div>
+                    <div class="element transition metal solid" data-state="solid">
+                        <p class="symbol">Ag</p>
+                    </div>
+                    <div class="element transition metal solid" data-state="solid">
+                        <p class="symbol">Cd</p>
+                    </div>
+                    <div class="element post-transition metal solid" data-state="solid">
+                        <p class="symbol">In</p>
+                    </div>
+                    <div class="element post-transition metal solid" data-state="solid">
+                        <p class="symbol">Sn</p>
+                    </div>
+                    <div class="element metalloid solid" data-state="solid">
+                        <p class="symbol">Sb</p>
+                    </div>
+                    <div class="element metalloid solid" data-state="solid">
+                        <p class="symbol">Te</p>
+                    </div>
+                    <div class="element halogen nonmetal solid" data-state="solid">
+                        <p class="symbol">I</p>
+                    </div>
+                    <div class="element noble-gas nonmetal gas" data-state="gas">
+                        <p class="symbol">Xe</p>
+                    </div>
+                    <div class="element alkali metal solid" data-state="solid">
+                        <p class="symbol">Cs</p>
+                    </div>
+                    <div class="element alkaline-earth metal solid" data-state="solid">
+                        <p class="symbol">Ba</p>
+                    </div>
+                    <div class="element transition metal solid" data-state="solid">
+                        <p class="symbol">Hf</p>
+                    </div>
+                    <div class="element transition metal solid" data-state="solid">
+                        <p class="symbol">Ta</p>
+                    </div>
+                    <div class="element transition metal solid" data-state="solid">
+                        <p class="symbol">W</p>
+                    </div>
+                    <div class="element transition metal solid" data-state="solid">
+                        <p class="symbol">Re</p>
+                    </div>
+                    <div class="element transition metal solid" data-state="solid">
+                        <p class="symbol">Os</p>
+                    </div>
+                    <div class="element transition metal solid" data-state="solid">
+                        <p class="symbol">Ir</p>
+                    </div>
+                    <div class="element transition metal solid" data-state="solid">
+                        <p class="symbol">Pt</p>
+                    </div>
+                    <div class="element transition metal solid" data-state="solid">
+                        <p class="symbol">Au</p>
+                    </div>
+                    <div class="element transition metal liquid" data-state="liquid">
+                        <p class="symbol">Hg</p>
+                    </div>
+                    <div class="element post-transition metal solid" data-state="solid">
+                        <p class="symbol">Tl</p>
+                    </div>
+                    <div class="element post-transition metal solid" data-state="solid">
+                        <p class="symbol">Pb</p>
+                    </div>
+                    <div class="element post-transition metal solid" data-state="solid">
+                        <p class="symbol">Bi</p>
+                    </div>
+                    <div class="element metalloid solid" data-state="solid">
+                        <p class="symbol">Po</p>
+                    </div>
+                    <div class="element halogen nonmetal solid" data-state="solid">
+                        <p class="symbol">At</p>
+                    </div>
+                    <div class="element noble-gas nonmetal gas" data-state="gas">
+                        <p class="symbol">Rn</p>
+                    </div>
+                    <div class="element alkali metal solid" data-state="solid">
+                        <p class="symbol">Fr</p>
+                    </div>
+                    <div class="element alkaline-earth metal solid" data-state="solid">
+                        <p class="symbol">Ra</p>
+                    </div>
+                    <div class="element transition metal unknown" data-state="unknown">
+                        <p class="symbol">Rf</p>
+                    </div>
+                    <div class="element transition metal unknown" data-state="unknown">
+                        <p class="symbol">Db</p>
+                    </div>
+                    <div class="element transition metal unknown" data-state="unknown">
+                        <p class="symbol">Sg</p>
+                    </div>
+                    <div class="element transition metal unknown" data-state="unknown">
+                        <p class="symbol">Bh</p>
+                    </div>
+                    <div class="element transition metal unknown" data-state="unknown">
+                        <p class="symbol">Hs</p>
+                    </div>
+                    <div class="element transition metal unknown" data-state="unknown">
+                        <p class="symbol">Mt</p>
+                    </div>
+                    <div class="element transition metal unknown" data-state="unknown">
+                        <p class="symbol">Ds</p>
+                    </div>
+                    <div class="element transition metal unknown" data-state="unknown">
+                        <p class="symbol">Rg</p>
+                    </div>
+                    <div class="element transition metal unknown" data-state="unknown">
+                        <p class="symbol">Cn</p>
+                    </div>
+                    <div class="element post-transition metal unknown" data-state="unknown">
+                        <p class="symbol">Nh</p>
+                    </div>
+                    <div class="element post-transition metal unknown" data-state="unknown">
+                        <p class="symbol">Fl</p>
+                    </div>
+                    <div class="element post-transition metal unknown" data-state="unknown">
+                        <p class="symbol">Mc</p>
+                    </div>
+                    <div class="element post-transition metal unknown" data-state="unknown">
+                        <p class="symbol">Lv</p>
+                    </div>
+                    <div class="element halogen nonmetal unknown" data-state="unknown">
+                        <p class="symbol">Ts</p>
+                    </div>
+                    <div class="element noble-gas nonmetal unknown" data-state="unknown">
+                        <p class="symbol">Og</p>
+                    </div>
+                    <div class="element lanthanide metal inner-transition solid" data-state="solid">
+                        <p class="symbol">La</p>
+                    </div>
+                    <div class="element lanthanide metal inner-transition solid" data-state="solid">
+                        <p class="symbol">Ce</p>
+                    </div>
+                    <div class="element lanthanide metal inner-transition solid" data-state="solid">
+                        <p class="symbol">Pr</p>
+                    </div>
+                    <div class="element lanthanide metal inner-transition solid" data-state="solid">
+                        <p class="symbol">Nd</p>
+                    </div>
+                    <div class="element lanthanide metal inner-transition solid" data-state="solid">
+                        <p class="symbol">Pm</p>
+                    </div>
+                    <div class="element lanthanide metal inner-transition solid" data-state="solid">
+                        <p class="symbol">Sm</p>
+                    </div>
+                    <div class="element lanthanide metal inner-transition solid" data-state="solid">
+                        <p class="symbol">Eu</p>
+                    </div>
+                    <div class="element lanthanide metal inner-transition solid" data-state="solid">
+                        <p class="symbol">Gd</p>
+                    </div>
+                    <div class="element lanthanide metal inner-transition solid" data-state="solid">
+                        <p class="symbol">Tb</p>
+                    </div>
+                    <div class="element lanthanide metal inner-transition solid" data-state="solid">
+                        <p class="symbol">Dy</p>
+                    </div>
+                    <div class="element lanthanide metal inner-transition solid" data-state="solid">
+                        <p class="symbol">Ho</p>
+                    </div>
+                    <div class="element lanthanide metal inner-transition solid" data-state="solid">
+                        <p class="symbol">Er</p>
+                    </div>
+                    <div class="element lanthanide metal inner-transition solid" data-state="solid">
+                        <p class="symbol">Tm</p>
+                    </div>
+                    <div class="element lanthanide metal inner-transition solid" data-state="solid">
+                        <p class="symbol">Yb</p>
+                    </div>
+                    <div class="element lanthanide metal inner-transition solid" data-state="solid">
+                        <p class="symbol">Lu</p>
+                    </div>
+                    <div class="element actinide metal inner-transition solid" data-state="solid">
+                        <p class="symbol">Ac</p>
+                    </div>
+                    <div class="element actinide metal inner-transition solid" data-state="solid">
+                        <p class="symbol">Th</p>
+                    </div>
+                    <div class="element actinide metal inner-transition solid" data-state="solid">
+                        <p class="symbol">Pa</p>
+                    </div>
+                    <div class="element actinide metal inner-transition solid" data-state="solid">
+                        <p class="symbol">U</p>
+                    </div>
+                    <div class="element actinide metal inner-transition solid" data-state="solid">
+                        <p class="symbol">Np</p>
+                    </div>
+                    <div class="element actinide metal inner-transition solid" data-state="solid">
+                        <p class="symbol">Pu</p>
+                    </div>
+                    <div class="element actinide metal inner-transition solid" data-state="solid">
+                        <p class="symbol">Am</p>
+                    </div>
+                    <div class="element actinide metal inner-transition solid" data-state="solid">
+                        <p class="symbol">Cm</p>
+                    </div>
+                    <div class="element actinide metal inner-transition solid" data-state="solid">
+                        <p class="symbol">Bk</p>
+                    </div>
+                    <div class="element actinide metal inner-transition solid" data-state="solid">
+                        <p class="symbol">Cf</p>
+                    </div>
+                    <div class="element actinide metal inner-transition solid" data-state="solid">
+                        <p class="symbol">Es</p>
+                    </div>
+                    <div class="element actinide metal inner-transition solid" data-state="solid">
+                        <p class="symbol">Fm</p>
+                    </div>
+                    <div class="element actinide metal inner-transition solid" data-state="solid">
+                        <p class="symbol">Md</p>
+                    </div>
+                    <div class="element actinide metal inner-transition solid" data-state="solid">
+                        <p class="symbol">No</p>
+                    </div>
+                    <div class="element actinide metal inner-transition solid" data-state="solid">
+                        <p class="symbol">Lr</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="site-footer text-muted">
+            <div class="container">
+                <p>*Random size generated items. Refresh to get different sizes.</p>
+                <p>Currently v.2.0.0</p>
+                <p>Designed &amp; Developed by Jon Pariente</p>
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> PRNT. All rights reserved.</p>
+            </div>
+        </footer>
+        <script src="/assets/js/jquery-3.2.0.min.js"></script>
+        <script src="/assets/js/tether.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>
+        <script src="/assets/js/magnet.min.js"></script>
+        <script src="/assets/js/magnet-docs.min.js"></script>
+        <script src="/assets/js/application.js"></script>
+    </body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Docs - Tiempo | PRNT</title>
+        <link rel="stylesheet" href="/assets/css/style.css">
+    </head>
+    <body id="portfolio-tiempo" class="page page-template-docs">
+        <header class="site-header">
+            <nav class="navbar bg-faded">
+                <div class="navbar-toggleable container">
+                    <a href="/" class="navbar-brand">PRNT</a>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item">
+                            <a href="/portfolio" class="nav-link">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/docs" class="nav-link">Documentation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/#about" class="nav-link">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <section class="jumbotron jumbotron-fluid text-center bg-faded">
+                <div class="container">
+                    <h1>Tiempo</h1>
+                    <p class="lead">Clean and minimal responsive under construction/coming soon HTML5 template.</p>
+                    <a href="http://goo.gl/WGfLZ7" class="btn btn-lg btn-link">Buy ❯</a>
+                </div>
+            </section>
+        </header>
+        <main class="site-content">
+            <div class="container py-2">
+                <div class="row justify-content-between">
+                    <article class="col-md-7 post">
+                        <h2 id="setting-up">Setting up</h2>
+                        <h3 id="html">HTML</h3>
+                        <p>The <strong>index.html</strong> file contains all the text of the template, logo, favicon, email address used for contact form and video background URL. To edit this, open the file:</p>
+                        <p>To change the text, locate content section and replace all the text you want.</p>
+                        <p>To change the logo, locate the image tags inside navigation section. Image with logo-retina class is for retina screen devices, this image should be double size of the image with logo class. Replace just the path inside the src attributes to change the logos.</p>
+                        <div class="highlight">
+                            <pre><span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"logo"</span> <span class="na">src=</span><span class="s">"images/tiempo.png"</span> <span class="na">alt=</span><span class="s">"Tiempo"</span><span class="nt">&gt;</span><br><span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"logo-retina"</span> <span class="na">src=</span><span class="s">"images/tiempo@2x.png"</span> <span class="na">alt=</span><span class="s">"Tiempo"</span><span class="nt">&gt;</span></pre>
+                        </div>
+                        <p>To change the favicon, locate link tag with shortcut icon values inside rel attribute. Replace just the path inside the href attribute.</p>
+                        <div class="highlight">
+                            <pre><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"shortcut icon"</span> <span class="na">href=</span><span class="s">"images/tiempo-favicon.png"</span><span class="nt">&gt;</span></pre>
+                        </div>
+                        <p>To change the email, locate contact us section inside content section. Replace all the information inside the form with your personal information. Don't forget to change the email inside anchor tag's href attribute and its value to receive emails in the specified address.</p>
+                        <div class="highlight">
+                            <pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"mailto:example@domain.com?subject=contact"</span> <span class="na">class=</span><span class="s">"email"</span><span class="nt">&gt;</span>example@domain.com<span class="nt">&lt;/a&gt;</span></pre>
+                        </div>
+                        <p>To change the video background, locate video section and replace the URL, the string inside the rectangle in the next image.</p>
+                        <div class="highlight">
+                            <pre><span class="c">&lt;!-- Video --&gt;</span><br><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"video-container"</span><span class="nt">&gt;</span><br>  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"video"</span> <span class="na">class=</span><span class="s">"player"</span> <span class="na">data-property=</span><span class="s">"{videoURL:'http://youtu.be/sBWPCvdv8Bk', containment:'.video-container',autoPlay:true, mute:true, showControls:false, showYTLogo:false, startAt:0, opacity:1}"</span><span class="nt">&gt;<br>  &lt;/div&gt;</span><br><span class="nt">&lt;/div&gt;</span></pre>
+                        </div>
+                        <p>To get a URL for a video, go to <a href="http://youtube.com" target="_blank">YouTube</a> and find the video you want as background. Below the video title, find Share and click on it. A section will open with the URL of the video, copy it and replace it as explained above.</p>
+                        <p>Once done, be sure that you have correctly set up tiempo.js to display video background.</p>
+
+                        <h3 id="css">CSS</h3>
+                        <p>The style.css file inside css folder is used to set the path for background images, either static image or slides. Images are not included with Tiempo, edit the path so it points to the images you are using. It's recommended to put that images in images folder to make it easier to point to that path.</p>
+                        <div class="highlight">
+                            <pre><span class="c">/* =IMAGE */</span><br>  <span class="nc">.image</span> <span class="p">{</span><br>    <span class="k">background-image</span><span class="o">:</span> <span class="sx">url(../images/background1.jpg)</span><span class="p">;</span><br>  <span class="p">}</span><br><br><span class="c">/* =SLIDES */</span><br>  <span class="nc">.slide</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">1</span><span class="o">)</span> <span class="p">{</span><br>    <span class="k">background-image</span><span class="o">:</span> <span class="sx">url(../images/background1.jpg)</span><span class="p">;</span><br>  <span class="p">}</span><br>  <span class="nc">.slide</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">2</span><span class="o">)</span> <span class="p">{</span><br>    <span class="k">background-image</span><span class="o">:</span> <span class="sx">url(../images/background2.jpg)</span><span class="p">;</span><br>  <span class="p">}</span><br>  <span class="nc">.slide</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">3</span><span class="o">)</span> <span class="p">{</span><br>    <span class="k">background-image</span><span class="o">:</span> <span class="sx">url(../images/background3.jpg)</span><span class="p">;</span><br>  <span class="p">}</span><br>  <span class="nc">.slide</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">4</span><span class="o">)</span> <span class="p">{</span><br>    <span class="k">background-image</span><span class="o">:</span> <span class="sx">url(../images/background4.jpg)</span><span class="p">;</span><br>  <span class="p">}</span></pre>
+                        </div>
+
+                        <h3 id="jquery">jQuery</h3>
+                        <p>The <strong>tiempo.js</strong> file inside js folder is used to set Tiempo. Open this file and locate settings variable at the top of the file. There are different properties with a value that can be edited.</p>
+
+                        <h4 id="date">date</h4>
+                        <p><code>Type: JavaScript Date Object</code> <code>Default: 'September 1, 2015 09:00'</code></p>
+                        <p>The date when the countdown will finish. It must have a valid JavaScript Date Object format.</p>
+
+                        <h4 id="url">url</h4>
+                        <p><code>Type: String</code> <code>Default: ' '</code></p>
+                        <p>The URL to redirect to when the countdown finish. Leave it empty if you don't want a redirection.</p>
+
+                        <h4 id="skin">skin</h4>
+                        <p><code>Type: String</code> <code>Default: 'dark'</code> <code>Values: 'light', 'dark'</code></p>
+                        <p>The color used for backgrounds and typography. Light skin has light backgrounds and dark text, dark skin has dark backgrounds and light text.</p>
+
+                        <h4 id="background">background</h4>
+                        <p><code>Type: String</code> <code>Default: 'image'</code> <code>Values: 'solid', 'image', 'slides''video'</code></p>
+                        <p>The background type used. Solid set a colored background, image set a background with a static image, slides set a background with a list of static images changing over the time, video set a dynamic background using a video from YouTube.</p>
+
+                        <h4 id="backgroundEffect">backgroundEffect</h4>
+                        <p><code>Type: String</code> <code>Default: 'none'</code> <code>Values: 'none', 'pattern', 'overlay', 'blur'</code></p>
+                        <p>The effect applied to a background with an image, slides or video. None doesn't apply any effect, pattern applies a pattern over the background, overlay applies a color (backgroundColor value) overlay over an image, blur applies a blur effect over images but not over a video.</p>
+
+                        <h4 id="backgroundColor">backgroundColor</h4>
+                        <p><code>Type: String</code> <code>Default: 'blue'</code> <code>Values: 'purple', 'blue', 'light-blue', 'light-green', 'green', 'yellow', 'orange', 'red', 'brown', 'black'</code></p>
+                        <p>The color used as background when solid is set in background option.</p>
+
+                        <h4 id="showControlPanel">showControlPanel</h4>
+                        <p><code>Type: Boolean</code> <code>Default: false</code> <code>Values: true, false</code></p>
+                        <p>Show a control panel with all previous options. Use it just to preview different options on the page, doesn't save the changes made.</p>
+
+                        <h3 id="mailchimp">Mailchimp</h3>
+                        <p>MailChimp is an email marketing service used to create, send, and track email newsletters.</p>
+                        <p>The <strong>subscribe.php</strong> file inside php folder is used to set Mailchimp. You need an account in Mailchimp to be able to use it. All you need to configure Mailchimp is to get the API key and a list ID from your account and replace the value of $api_key and $list_id in subscribe.php. For further information on how to get the API key, create a list and get the ID go to <a href="http://mailchimp.com" target="_blank">Mailchimp</a>.</p>
+                        <div class="highlight">
+                            <pre class="mb-0"><span class="cp">&lt;?php</span><br><br><span class="nv">$api_key</span> <span class="o">=</span> <span class="s2">"api_key"</span><span class="p">;</span><br><span class="nv">$list_id</span> <span class="o">=</span> <span class="s2">"list_id"</span><span class="p">;</span><br><br><span class="cp">?&gt;</span><span class="x"></span></pre>
+                        </div>
+                    </article>
+                    <nav class="col-md-3 sidebar">
+                        <ul class="nav sticky-top flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./../getting-started">Getting Started</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#setting-up">Setting Up</a>
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="html">HTML</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#css">CSS</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#jquery">jQuery</a>
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#date">date</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#url">url</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#skin">skin</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#background">background</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#backgroundEffect">backgroundEffect</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#backgroundColor">backgroundColor</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#showControlPanel">showControlPanel</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#mailchimp">Mailchimp</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item mt-1">
+                                <a class="nav-link" href="/demo/tiempo">Examples</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </main>
+        <script src="/assets/
+                    <a href="/" class="navbar-brand">PRNT</a>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item">
+                            <a href="/portfolio" class="nav-link">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/docs" class="nav-link">Documentation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/#about" class="nav-link">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <section class="jumbotron jumbotron-fluid text-center bg-faded">
+                <div class="container">
+                    <h1>Flat</h1>
+                    <p class="lead">Flat is a flat-styled Bootstrap responsive navbar, presented in three<br> different styles, that includes submenus and off canvas menu.</p>
+                    <a href="http://goo.gl/Ol6vHg" class="btn btn-lg btn-link">Buy ❯</a>
+                </div>
+            </section>
+        </header>js/jquery-3.2.0.min.js"></script>
+        <script src="/assets/
+                    <a href="/" class="navbar-brand">PRNT</a>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item">
+                            <a href="/portfolio" class="nav-link">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/docs" class="nav-link">Documentation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/#about" class="nav-link">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <section class="jumbotron jumbotron-fluid text-center bg-faded">
+                <div class="container">
+                    <h1>Flat</h1>
+                    <p class="lead">Flat is a flat-styled Bootstrap responsive navbar, presented in three<br> different styles, that includes submenus and off canvas menu.</p>
+                    <a href="http://goo.gl/Ol6vHg" class="btn btn-lg btn-link">Buy ❯</a>
+                </div>
+            </section>
+        </header>js/tether.min.js"></script>
+        <script src="/assets/
+                    <a href="/" class="navbar-brand">PRNT</a>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item">
+                            <a href="/portfolio" class="nav-link">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/docs" class="nav-link">Documentation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/#about" class="nav-link">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <section class="jumbotron jumbotron-fluid text-center bg-faded">
+                <div class="container">
+                    <h1>Flat</h1>
+                    <p class="lead">Flat is a flat-styled Bootstrap responsive navbar, presented in three<br> different styles, that includes submenus and off canvas menu.</p>
+                    <a href="http://goo.gl/Ol6vHg" class="btn btn-lg btn-link">Buy ❯</a>
+                </div>
+            </section>
+        </header>js/bootstrap.min.js"></script>
+        <script src="/assets/
+                    <a href="/" class="navbar-brand">PRNT</a>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item">
+                            <a href="/portfolio" class="nav-link">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/docs" class="nav-link">Documentation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/#about" class="nav-link">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <section class="jumbotron jumbotron-fluid text-center bg-faded">
+                <div class="container">
+                    <h1>Flat</h1>
+                    <p class="lead">Flat is a flat-styled Bootstrap responsive navbar, presented in three<br> different styles, that includes submenus and off canvas menu.</p>
+                    <a href="http://goo.gl/Ol6vHg" class="btn btn-lg btn-link">Buy ❯</a>
+                </div>
+            </section>
+        </header>js/magnet.min.js"></script>
+        <script src="/assets/
+                    <a href="/" class="navbar-brand">PRNT</a>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item">
+                            <a href="/portfolio" class="nav-link">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/docs" class="nav-link">Documentation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/#about" class="nav-link">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <section class="jumbotron jumbotron-fluid text-center bg-faded">
+                <div class="container">
+                    <h1>Flat</h1>
+                    <p class="lead">Flat is a flat-styled Bootstrap responsive navbar, presented in three<br> different styles, that includes submenus and off canvas menu.</p>
+                    <a href="http://goo.gl/Ol6vHg" class="btn btn-lg btn-link">Buy ❯</a>
+                </div>
+            </section>
+        </header>js/magnet-docs.min.js"></script>
+        <script src="/assets/
+                    <a href="/" class="navbar-brand">PRNT</a>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item">
+                            <a href="/portfolio" class="nav-link">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/docs" class="nav-link">Documentation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/#about" class="nav-link">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <section class="jumbotron jumbotron-fluid text-center bg-faded">
+                <div class="container">
+                    <h1>Flat</h1>
+                    <p class="lead">Flat is a flat-styled Bootstrap responsive navbar, presented in three<br> different styles, that includes submenus and off canvas menu.</p>
+                    <a href="http://goo.gl/Ol6vHg" class="btn btn-lg btn-link">Buy ❯</a>
+                </div>
+            </section>
+        </header>js/application.js"></script>
+        <footer class="site-footer text-muted">
+            <div class="container">
+                <p>Currently v.1.0.1.</p>
+                <p>Designed &amp; Developed by Jon Pariente</p>
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> PRNT. All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PRNT</title>
+        <link rel="stylesheet" href="/assets/css/style.css">
+    </head>
+    <body>
+        <header class="site-header">
+            <nav class="navbar bg-faded">
+                <div class="navbar-toggleable container">
+                    <a href="/" class="navbar-brand">PRNT</a>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item">
+                            <a href="/portfolio" class="nav-link">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/docs" class="nav-link">Documentation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/#about" class="nav-link">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <section class="jumbotron jumbotron-fluid text-center bg-faded">
+                <div class="container">
+                    <h1>Ristretto</h1>
+                    <p class="lead">Clean and minimal responsive under construction/coming soon HTML5 template.</p>
+                    <a href="https://creativemarket.com/haundodesign/1013636-Ristretto-Coming-Soon-Template" class="btn btn-lg btn-link">Buy ❯</a>
+                </div>
+            </section>
+        </header>
+        <main class="site-main">
+            <div class="center-block">
+                <div class="container py-2">
+                    <div class="row justify-content-between">
+                        <div class="col-md-7 post">
+                            <article>
+                                <header>
+                                    <h2 id="getting_started">Getting started</h2>
+                                    <p class="lead">An overview of Ristretto, folder structure, included files, how to use and setting up.</p>
+                                </header>
+                                <section>
+                                    <h3 id="whats_included">What's included</h3>
+                                    <p>Every downloaded copy of Ristretto is compressed in a folder. Once downloaded, unzip the folder to get a structure like this:</p>
+                                    <div class="highlight">
+                                        <pre>ristretto/<br>├── css/<br>│   └── ristretto.css<br>├── fonts/<br>├── images/<br>│   ├── background01.jpg<br>│   ├── background02.jpg<br>│   ├── background03.jpg<br>│   ├── background04.jpg<br>│   ├── background05.jpg<br>|   └── favicon.png<br>├── js/<br>│   └──  ristretto.js<br>├── php/<br>│   ├── Mailchimp/<br>│   ├── contact.php<br>│   ├── Mailchimp.php<br>│   └── subscribe.php<br>├── sass/<br>│   ├── base/<br>│   ├── helpers/<br>│   ├── mixins/<br>│   ├── modules/<br>│   └── ristretto.scss<br>├── config.rb<br>├── readme.html<br>└── index.html</pre>
+                                    </div>
+                                    <p>The download includes all the files needed to use Ristretto:</p>
+                                    <ul class="list-styled">
+                                        <li><strong>ristretto.js</strong> for configuration and functionality</li>
+                                        <li><strong>css/</strong> folder with the main stylesheet</li>
+                                        <li><strong>php/</strong> folder with files related to emailing</li>
+                                        <li><strong>sass/</strong> folder with files ready to be compiled to a stylesheet</li>
+                                        <li><strong>index.html</strong> main file</li>
+                                        <li><strong>config.rb</strong> for configuration of the sass project</li>
+                                    </ul>
+                                </section>
+                            </article>
+                            <article>
+                                <header>
+                                    <h2 id="setting_up">Setting up</h2>
+                                    <p class="lead">Ristretto is ready to use, but there are easy-to-set options available to adapt the template to meet your requirements. To edit this options, open <strong>ristretto.js</strong> and set a value for each key of settings variable.</p>
+                                    </p>
+                                </header>
+                                <section>
+                                    <h4 id="date">date</h4>
+                                    <div class="option-values">
+                                        <span class="label label-default">Type: <em>JavaScript Date Object</em></span>
+                                        <span class="label label-default">Default: <span class="s">'11/10/2016 09:00:00'</span></span>
+                                    </div>
+                                    <p>The date when countdown ends. It must have a valid JavaScript Date Object format.</p>
+
+                                    <h4 id="background">background</h4>
+                                    <div class="option-values">
+                                        <span class="label label-default">Type: <em>Boolean, String</em></span>
+                                        <span class="label label-default">Default: <span class="bool">false</span></span>
+                                        <span class="label label-default">Values: <span class="bool">false</span>, <span class="s">'image'</span>, <span class="s">'slides'</span>, <span class="s">'video'</span></span>
+                                    </div>
+                                    <p>The background style of the page. False and 'image' set a static image as background, slides sets a group of 4 rotating images as background and video sets a dynamic background playing a video.</p>
+
+                                    <h4 id="showTitle">showTitle</h4>
+                                    <div class="option-values">
+                                        <span class="label label-default">Type: <em>Boolean</em></span>
+                                        <span class="label label-default">Default: <span class="bool">true</span></span>
+                                        <span class="label label-default">Values: <span class="bool">true</span>, <span class="bool">false</span></span>
+                                    </div>
+                                    <p>Display a title in the main page, above the countdown. False doesn't show any title.</p>
+
+                                    <h4 id="showCountdownTags">showCountdownTags</h4>
+                                    <div class="option-values">
+                                        <span class="label label-default">Type: <em>Boolean</em></span>
+                                        <span class="label label-default">Default: <span class="bool">true</span></span>
+                                        <span class="label label-default">Values: <span class="bool">true</span>, <span class="bool">false</span></span>
+                                    </div>
+                                    <p>Display a descriptive text tag below each counter. False doesn't show any tag.</p>
+                                </section>
+
+                                <header>
+                                    <h2 id="customize">Customize</h2>
+                                    <p class="lead">Even after setting up some options, you may want to make more deeper changes to the template. In this sections, you can find explanations and examples of how to do it for every case.</p>
+                                </header>
+                                <section>
+                                    <h3 id="text">Text</h3>
+                                    <p>To edit the text of the template, open <strong>index.html</strong> with a text editor and just replace the text you want for your own. Don't replace any tag or attribute if you don't know what you're doing, this may affect either appearance or functionality of the template.</p>
+
+                                    <p>To edit social networks, go to the contact section, locate the list containing them and replace each href attribute with a link to your profile. You can add more social networks, just copy and paste a line of code and change the text, link and icon.</p>
+                                    <div class="highlight highlight-html">
+                                        <pre><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-inline social-networks"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"fa fa-twitter"</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"hidden"</span><span class="p">&gt;</span>Twitter<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"fa fa-facebook"</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"hidden"</span><span class="p">&gt;</span>Facebook<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"fa fa-dribbble"</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"hidden"</span><span class="p">&gt;</span>Dribbble<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"fa fa-behance"</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"hidden"</span><span class="p">&gt;</span>Behance<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"fa fa-google-plus"</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"hidden"</span><span class="p">&gt;</span>Google+<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></pre>
+                                    </div>
+
+                                    <h3 id="images">Images</h3>
+                                    <p>To replace the logo displayed in the template, open <strong>index.html</strong> and go to the nav section. Locate the image tag and edit the path of the src and srcset attributes. You may also include an image for high density pixel screens ending with @2x and double the size of the regular one.
+                                    <div class="highlight highlight-css">
+                                        <pre><span class="p">&lt;</span><span class="nt">img</span> <span class="na">class</span><span class="o">=</span><span class="s">"brand"</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/ristretto.png"</span> <span class="na">srcset</span><span class="o">=</span><span class="s">"images/ristretto.png 1x, images/ristretto@2x.png 2x"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"brand"</span><span class="p">&gt;</span></pre>
+                                    </div>
+
+                                    <p>To edit images displayed on the background of the page, open images folder and replace existing images, named background_x.jpg, with your own keeping same file names and extensions.</p>
+
+                                    <p>If you want to edit images without overwritting existing ones, open <strong>ristretto.css</strong> and go to the theme section. Edit the path in the background-image property, .image class is for static background and .slide-x classes for rotating background.</p>
+                                    <div class="highlight highlight-css">
+                                        <pre><span class="nc">.image</span> <span class="p">{</span>
+  <span class="nb">background-image</span><span class="o">:</span> <span class="sx">url('../images/background1.jpg')</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.slide-1</span> <span class="p">{</span>
+  <span class="nb">background-image</span><span class="o">:</span> <span class="sx">url('../images/background2.jpg')</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.slide-2</span> <span class="p">{</span>
+  <span class="nb">background-image</span><span class="o">:</span> <span class="sx">url('../images/background3.jpg')</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.slide-3</span> <span class="p">{</span>
+  <span class="nb">background-image</span><span class="o">:</span> <span class="sx">url('../images/background4.jpg')</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.slide-4</span> <span class="p">{</span>
+  <span class="nb">background-image</span><span class="o">:</span> <span class="sx">url('../images/background5.jpg')</span><span class="p">;</span>
+<span class="p">}</span>
+</pre>
+                                    </div>
+                                    <p>If you're customizing using Sass, open <strong>_theme.scss</strong> and edit the value of the following variables on the top of the file.</p>
+                                    <div class="highlight highlight-html">
+                                        <pre><span class="nv">$image-url</span><span class="o">:</span> <span class="s2">"background1.jpg"</span><span class="p">;</span>
+
+<span class="nv">$slide1-url</span><span class="o">:</span> <span class="s2">"background2.jpg"</span><span class="p">;</span>
+<span class="nv">$slide2-url</span><span class="o">:</span> <span class="s2">"background3.jpg"</span><span class="p">;</span>
+<span class="nv">$slide3-url</span><span class="o">:</span> <span class="s2">"background4.jpg"</span><span class="p">;</span>
+<span class="nv">$slide4-url</span><span class="o">:</span> <span class="s2">"background5.jpg"</span><span class="p">;</span>
+</pre>
+                                    </div>
+
+                                    <h3 id="video">Video</h3>
+                                    <p>To include a video background, open <strong>index.html</strong>, locate video tag and replace the src attributes of the source tags with the video file name. It's recommended to save media files in the video folder.</p>
+                                    <div class="highlight highlight-html">
+                                        <pre><span class="p">&lt;</span><span class="nt">video</span> <span class="na">class</span><span class="o">=</span><span class="s">"video hidden"</span> <span class="na">autoplay</span> <span class="na">loop</span> <span class="na">muted</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">"video/FILE_NAME.webm"</span> <span class="na">type</span><span class="o">=</span><span class="s">"video/webm"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">"video/FILE_NAME.mp4"</span> <span class="na">type</span><span class="o">=</span><span class="s">"video/mp4"</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">video</span><span class="p">&gt;</span></pre>
+                                    </div>
+
+                                    <h3 id="contact">Contact</h3>
+                                    <p>To change the email address where the contact form is sent, open <strong>contact.php</strong> and replace the email for the $to variable. To receive emails through this method, files must be in a compatible PHP 5.3+ server.</p>
+                                    <div class="highlight highlight-php">
+                                        <pre><span class="x">$to = 'example@example.com'; // Email the form is sent from.</span></pre>
+                                    </div>
+
+                                    <h3 id="subscription">Subscriptions</h3>
+                                    <p>To get subscriptions, you need an account in Mailchimp. MailChimp is an email marketing service used to create, send, and track email newsletters. Once you have an account, you must get the API key and a list ID form your account, open <strong>subscribe.php</strong> and replace $api_key and $list_id variables with their corresponding value. For more information about how to get an API key, create a list and get the ID visit <a href="http://mailchimp.com" target="_blank">Mailchimp</a>.</p>
+                                    <div class="highlight highlight-php">
+                                        <pre><span class="x">$api_key = "api_key";</span>
+<span class="x">$list_id = "list_id";</span>
+</pre>
+                                    </div>
+
+                                    <h3 id="icons">Icons</h3>
+                                    <p>Ristretto uses two icon set, Linea Basic and Font Awesome. To change a Linea Basic icon, replace .icon-{iconname} class with an existing icon name. To change a Font Awesome icon, replace .fa-{iconname} class with an existing icon name. For a full available icon list, visit <a href="http://linea.io">Linea</a> and <a href="http://fontawesome.io">Font Awesome</a>.</p>
+
+                                    <h3 id="favicon">Favicon</h3>
+                                    <p>A favicon, also known as a shortcut icon, is a file containing an icon related to a webpage. To edit the favicon, open <strong>index.html</strong> and replace the path of the following tag:</p>
+                                    <div class="highlight highlight-html">
+                                        <pre><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"shortcut icon"</span> <span class="na">href=</span><span class="s">"images/favicon.png"</span><span class="nt">&gt;</span></pre>
+                                    </div>
+                                    <p>To edit the favicon, open images folder and replace favicon.png with your own keeping the same name and file extension.</p>
+                            </article>
+                        </div>
+                        <aside class="col-md-3 sidebar">
+                            <ul class="nav sticky-top flex-column">
+                                <li class="nav-item">
+                                    <a href="#getting_started">Getting started</a>
+                                    <ul class="nav">
+                                        <li><a href="#whats_included">What's included</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#setting_up">Setting up</a>
+                                    <ul class="nav">
+                                        <li><a href="#date">date</a></li>
+                                        <li><a href="#background">background</a></li>
+                                        <li><a href="#showTitle">showTitle</a></li>
+                                        <li><a href="#showCountdownTags">showCountdownTags</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#customize">Customize</a>
+                                    <ul class="nav">
+                                        <li><a href="#text">Text</a></li>
+                                        <li><a href="#images">Images</a></li>
+                                        <li><a href="#video">Video</a></li>
+                                        <li><a href="#contact">Contact</a></li>
+                                        <li><a href="#subscription">Subscription</a></li>
+                                        <li><a href="#icons">Icons</a></li>
+                                        <li><a href="#favicon">Favicon</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item mt-1"><a href="/demo/ristretto">Example</a></li>
+                            </ul>
+                        </aside>
+                    </div>
+        </main>
+        <footer class="site-footer text-muted">
+            <div class="container">
+                <p>Currently v.1.0.0.</p>
+                <p>Designed &amp; Developed by Jon Pariente</p>
+                <p>&copy;<script>document.write(new Date().getFullYear())</script> PRNT. All rights reserved.
+                </p>
+            </div>
+        </footer>
+        <script src="/assets/js/jquery-3.2.0.min.js"></script>
+        <script src="/assets/js/tether.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>
+        <script src="/assets/js/magnet.min.js"></script>
+        <script src="/assets/js/magnet-docs.min.js"></script>
+        <script src="/assets/js/application.js"></script>
+    </body>
+</html>

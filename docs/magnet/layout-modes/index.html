@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Docs - Magnet | PRNT</title>
+        <link rel="stylesheet" href="/assets/css/style.css">
+    </head>
+<body class="site">
+  <header class="site-header">
+            <nav class="navbar bg-faded">
+                <div class="navbar-toggleable container">
+                    <a href="/" class="navbar-brand">PRNT</a>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item">
+                            <a href="/portfolio" class="nav-link">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/docs" class="nav-link">Documentation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/#about" class="nav-link">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <section class="jumbotron jumbotron-fluid bg-faded text-center">
+                <div class="container">
+                    <h1>Magnet</h1>
+                    <p class="lead text-muted">Magnet is a Vanilla JavaScript library and a jQuery plugin to <br /> create gapless, filterable and sortable layouts.</p>
+                    <a href="http://goo.gl/Y9WUw4" class="btn btn-lg btn-link">Buy ❯</a>
+                </div>
+            </section>
+        </header>
+  <main class="site-content">
+    <div class="container py-2">
+      <div class="row flex-items-xs-between">
+        <article class="col-md-7">
+          <h2 id="layout-modes">Layout Modes</h2>
+          <p class="lead">Magnet position items depending on a layout mode. A layout mode, follows its own layout logic.</p>
+          <h3 id="grid">Grid</h3>
+          <p>Magnet lays out items using a bin-packing algorithm, creating gapless layouts. By default, this is the layout mode used.</p>
+          <div class="periodic-table layout-mode-grid">
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Hydrogenium</span>
+              <span class="number">1</span>
+              <span class="symbol">H</span>
+              <span class="weight">1.008</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Helium</span>
+              <span class="number">2</span>
+              <span class="symbol">He</span>
+              <span class="weight">4.002</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Lithium</span>
+              <span class="number">3</span>
+              <span class="symbol">Li</span>
+              <span class="weight">6.94</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Beryllium</span>
+              <span class="number">4</span>
+              <span class="symbol">Be</span>
+              <span class="weight">9.012</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Borium</span>
+              <span class="number">5</span>
+              <span class="symbol">B</span>
+              <span class="weight">10.81</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Carbonium</span>
+              <span class="number">6</span>
+              <span class="symbol">C</span>
+              <span class="weight">12.011</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Nitrogenium</span>
+              <span class="number">7</span>
+              <span class="symbol">N</span>
+              <span class="weight">14.007</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Oxygenium</span>
+              <span class="number">8</span>
+              <span class="symbol">O</span>
+              <span class="weight">15.999</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Fluorum</span>
+              <span class="number">9</span>
+              <span class="symbol">F</span>
+              <span class="weight">18.998</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Neon</span>
+              <span class="number">10</span>
+              <span class="symbol">Ne</span>
+              <span class="weight">20.179</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Natrium</span>
+              <span class="number">11</span>
+              <span class="symbol">Na</span>
+              <span class="weight">22.989</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Magnesium</span>
+              <span class="number">12</span>
+              <span class="symbol">Mg</span>
+              <span class="weight">24.305</span>
+            </div>
+            <div class="element post-transition metal" data-category="post-transition">
+              <span class="name">Aluminium</span>
+              <span class="number">13</span>
+              <span class="symbol">Al</span>
+              <span class="weight">26.981</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Silicium</span>
+              <span class="number">14</span>
+              <span class="symbol">Si</span>
+              <span class="weight">28.085</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Phosphorus</span>
+              <span class="number">15</span>
+              <span class="symbol">P</span>
+              <span class="weight">30.973</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Sulphur</span>
+              <span class="number">16</span>
+              <span class="symbol">S</span>
+              <span class="weight">32.06</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Chlorum</span>
+              <span class="number">17</span>
+              <span class="symbol">Cl</span>
+              <span class="weight">35.45</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Argon</span>
+              <span class="number">18</span>
+              <span class="symbol">Ar</span>
+              <span class="weight">39.948</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Kalium</span>
+              <span class="number">19</span>
+              <span class="symbol">K</span>
+              <span class="weight">39.098</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Calcium</span>
+              <span class="number">20</span>
+              <span class="symbol">Ca</span>
+              <span class="weight">40.078</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Scandium</span>
+              <span class="number">21</span>
+              <span class="symbol">Sc</span>
+              <span class="weight">44.955</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Titanium</span>
+              <span class="number">22</span>
+              <span class="symbol">Ti</span>
+              <span class="weight">47.867</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Vanadium</span>
+              <span class="number">23</span>
+              <span class="symbol">V</span>
+              <span class="weight">50.941</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Chromium</span>
+              <span class="number">24</span>
+              <span class="symbol">Cr</span>
+              <span class="weight">51.996</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Manganum</span>
+              <span class="number">25</span>
+              <span class="symbol">Mn</span>
+              <span class="weight">54.938</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Ferrum</span>
+              <span class="number">26</span>
+              <span class="symbol">Fe</span>
+              <span class="weight">55.845</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Cobaltum</span>
+              <span class="number">27</span>
+              <span class="symbol">Co</span>
+              <span class="weight">58.933</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Niccolum</span>
+              <span class="number">28</span>
+              <span class="symbol">Ni</span>
+              <span class="weight">58.693</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Cuprum</span>
+              <span class="number">29</span>
+              <span class="symbol">Cu</span>
+              <span class="weight">63.546</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Zincum</span>
+              <span class="number">30</span>
+              <span class="symbol">Zn</span>
+              <span class="weight">65.38</span>
+            </div>
+            <div class="element post-transition metal" data-category="post-transition">
+              <span class="name">Gallium</span>
+              <span class="number">31</span>
+              <span class="symbol">Ga</span>
+              <span class="weight">69.723</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Germanium</span>
+              <span class="number">32</span>
+              <span class="symbol">Ge</span>
+              <span class="weight">72.63</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Arsenicum</span>
+              <span class="number">33</span>
+              <span class="symbol">As</span>
+              <span class="weight">74.921</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Selenium</span>
+              <span class="number">34</span>
+              <span class="symbol">Se</span>
+              <span class="weight">78.971</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Bromum</span>
+              <span class="number">35</span>
+              <span class="symbol">Br</span>
+              <span class="weight">79.904</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Krypton</span>
+              <span class="number">36</span>
+              <span class="symbol">Kr</span>
+              <span class="weight">83.798</span>
+            </div>
+          </div>
+          <h3 id="rows">Rows</h3>
+          <p>Magnet lays out items into rows. Rows progress vertically when a row is completed. Arranges items similar to a grid using CSS floats.</p>
+          <div class="periodic-table layout-mode-rows">
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Hydrogenium</span>
+              <span class="number">1</span>
+              <span class="symbol">H</span>
+              <span class="weight">1.008</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Helium</span>
+              <span class="number">2</span>
+              <span class="symbol">He</span>
+              <span class="weight">4.002</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Lithium</span>
+              <span class="number">3</span>
+              <span class="symbol">Li</span>
+              <span class="weight">6.94</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Beryllium</span>
+              <span class="number">4</span>
+              <span class="symbol">Be</span>
+              <span class="weight">9.012</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Borium</span>
+              <span class="number">5</span>
+              <span class="symbol">B</span>
+              <span class="weight">10.81</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Carbonium</span>
+              <span class="number">6</span>
+              <span class="symbol">C</span>
+              <span class="weight">12.011</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Nitrogenium</span>
+              <span class="number">7</span>
+              <span class="symbol">N</span>
+              <span class="weight">14.007</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Oxygenium</span>
+              <span class="number">8</span>
+              <span class="symbol">O</span>
+              <span class="weight">15.999</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Fluorum</span>
+              <span class="number">9</span>
+              <span class="symbol">F</span>
+              <span class="weight">18.998</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Neon</span>
+              <span class="number">10</span>
+              <span class="symbol">Ne</span>
+              <span class="weight">20.179</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Natrium</span>
+              <span class="number">11</span>
+              <span class="symbol">Na</span>
+              <span class="weight">22.989</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Magnesium</span>
+              <span class="number">12</span>
+              <span class="symbol">Mg</span>
+              <span class="weight">24.305</span>
+            </div>
+            <div class="element post-transition metal" data-category="post-transition">
+              <span class="name">Aluminium</span>
+              <span class="number">13</span>
+              <span class="symbol">Al</span>
+              <span class="weight">26.981</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Silicium</span>
+              <span class="number">14</span>
+              <span class="symbol">Si</span>
+              <span class="weight">28.085</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Phosphorus</span>
+              <span class="number">15</span>
+              <span class="symbol">P</span>
+              <span class="weight">30.973</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Sulphur</span>
+              <span class="number">16</span>
+              <span class="symbol">S</span>
+              <span class="weight">32.06</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Chlorum</span>
+              <span class="number">17</span>
+              <span class="symbol">Cl</span>
+              <span class="weight">35.45</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Argon</span>
+              <span class="number">18</span>
+              <span class="symbol">Ar</span>
+              <span class="weight">39.948</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Kalium</span>
+              <span class="number">19</span>
+              <span class="symbol">K</span>
+              <span class="weight">39.098</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Calcium</span>
+              <span class="number">20</span>
+              <span class="symbol">Ca</span>
+              <span class="weight">40.078</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Scandium</span>
+              <span class="number">21</span>
+              <span class="symbol">Sc</span>
+              <span class="weight">44.955</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Titanium</span>
+              <span class="number">22</span>
+              <span class="symbol">Ti</span>
+              <span class="weight">47.867</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Vanadium</span>
+              <span class="number">23</span>
+              <span class="symbol">V</span>
+              <span class="weight">50.941</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Chromium</span>
+              <span class="number">24</span>
+              <span class="symbol">Cr</span>
+              <span class="weight">51.996</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Manganum</span>
+              <span class="number">25</span>
+              <span class="symbol">Mn</span>
+              <span class="weight">54.938</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Ferrum</span>
+              <span class="number">26</span>
+              <span class="symbol">Fe</span>
+              <span class="weight">55.845</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Cobaltum</span>
+              <span class="number">27</span>
+              <span class="symbol">Co</span>
+              <span class="weight">58.933</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Niccolum</span>
+              <span class="number">28</span>
+              <span class="symbol">Ni</span>
+              <span class="weight">58.693</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Cuprum</span>
+              <span class="number">29</span>
+              <span class="symbol">Cu</span>
+              <span class="weight">63.546</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Zincum</span>
+              <span class="number">30</span>
+              <span class="symbol">Zn</span>
+              <span class="weight">65.38</span>
+            </div>
+            <div class="element post-transition metal" data-category="post-transition">
+              <span class="name">Gallium</span>
+              <span class="number">31</span>
+              <span class="symbol">Ga</span>
+              <span class="weight">69.723</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Germanium</span>
+              <span class="number">32</span>
+              <span class="symbol">Ge</span>
+              <span class="weight">72.63</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Arsenicum</span>
+              <span class="number">33</span>
+              <span class="symbol">As</span>
+              <span class="weight">74.921</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Selenium</span>
+              <span class="number">34</span>
+              <span class="symbol">Se</span>
+              <span class="weight">78.971</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Bromum</span>
+              <span class="number">35</span>
+              <span class="symbol">Br</span>
+              <span class="weight">79.904</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Krypton</span>
+              <span class="number">36</span>
+              <span class="symbol">Kr</span>
+              <span class="weight">83.798</span>
+            </div>
+          </div>
+          <h3 id="columns">Columns</h3>
+          <p>Magnet lays out items into columns. Columns progress horizontally when a column is completed.</p>
+          <div class="periodic-table layout-mode-columns">
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Hydrogenium</span>
+              <span class="number">1</span>
+              <span class="symbol">H</span>
+              <span class="weight">1.008</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Helium</span>
+              <span class="number">2</span>
+              <span class="symbol">He</span>
+              <span class="weight">4.002</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Lithium</span>
+              <span class="number">3</span>
+              <span class="symbol">Li</span>
+              <span class="weight">6.94</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Beryllium</span>
+              <span class="number">4</span>
+              <span class="symbol">Be</span>
+              <span class="weight">9.012</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Borium</span>
+              <span class="number">5</span>
+              <span class="symbol">B</span>
+              <span class="weight">10.81</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Carbonium</span>
+              <span class="number">6</span>
+              <span class="symbol">C</span>
+              <span class="weight">12.011</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Nitrogenium</span>
+              <span class="number">7</span>
+              <span class="symbol">N</span>
+              <span class="weight">14.007</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Oxygenium</span>
+              <span class="number">8</span>
+              <span class="symbol">O</span>
+              <span class="weight">15.999</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Fluorum</span>
+              <span class="number">9</span>
+              <span class="symbol">F</span>
+              <span class="weight">18.998</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Neon</span>
+              <span class="number">10</span>
+              <span class="symbol">Ne</span>
+              <span class="weight">20.179</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Natrium</span>
+              <span class="number">11</span>
+              <span class="symbol">Na</span>
+              <span class="weight">22.989</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Magnesium</span>
+              <span class="number">12</span>
+              <span class="symbol">Mg</span>
+              <span class="weight">24.305</span>
+            </div>
+            <div class="element post-transition metal" data-category="post-transition">
+              <span class="name">Aluminium</span>
+              <span class="number">13</span>
+              <span class="symbol">Al</span>
+              <span class="weight">26.981</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Silicium</span>
+              <span class="number">14</span>
+              <span class="symbol">Si</span>
+              <span class="weight">28.085</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Phosphorus</span>
+              <span class="number">15</span>
+              <span class="symbol">P</span>
+              <span class="weight">30.973</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Sulphur</span>
+              <span class="number">16</span>
+              <span class="symbol">S</span>
+              <span class="weight">32.06</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Chlorum</span>
+              <span class="number">17</span>
+              <span class="symbol">Cl</span>
+              <span class="weight">35.45</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Argon</span>
+              <span class="number">18</span>
+              <span class="symbol">Ar</span>
+              <span class="weight">39.948</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Kalium</span>
+              <span class="number">19</span>
+              <span class="symbol">K</span>
+              <span class="weight">39.098</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Calcium</span>
+              <span class="number">20</span>
+              <span class="symbol">Ca</span>
+              <span class="weight">40.078</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Scandium</span>
+              <span class="number">21</span>
+              <span class="symbol">Sc</span>
+              <span class="weight">44.955</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Titanium</span>
+              <span class="number">22</span>
+              <span class="symbol">Ti</span>
+              <span class="weight">47.867</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Vanadium</span>
+              <span class="number">23</span>
+              <span class="symbol">V</span>
+              <span class="weight">50.941</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Chromium</span>
+              <span class="number">24</span>
+              <span class="symbol">Cr</span>
+              <span class="weight">51.996</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Manganum</span>
+              <span class="number">25</span>
+              <span class="symbol">Mn</span>
+              <span class="weight">54.938</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Ferrum</span>
+              <span class="number">26</span>
+              <span class="symbol">Fe</span>
+              <span class="weight">55.845</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Cobaltum</span>
+              <span class="number">27</span>
+              <span class="symbol">Co</span>
+              <span class="weight">58.933</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Niccolum</span>
+              <span class="number">28</span>
+              <span class="symbol">Ni</span>
+              <span class="weight">58.693</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Cuprum</span>
+              <span class="number">29</span>
+              <span class="symbol">Cu</span>
+              <span class="weight">63.546</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Zincum</span>
+              <span class="number">30</span>
+              <span class="symbol">Zn</span>
+              <span class="weight">65.38</span>
+            </div>
+            <div class="element post-transition metal" data-category="post-transition">
+              <span class="name">Gallium</span>
+              <span class="number">31</span>
+              <span class="symbol">Ga</span>
+              <span class="weight">69.723</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Germanium</span>
+              <span class="number">32</span>
+              <span class="symbol">Ge</span>
+              <span class="weight">72.63</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Arsenicum</span>
+              <span class="number">33</span>
+              <span class="symbol">As</span>
+              <span class="weight">74.921</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Selenium</span>
+              <span class="number">34</span>
+              <span class="symbol">Se</span>
+              <span class="weight">78.971</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Bromum</span>
+              <span class="number">35</span>
+              <span class="symbol">Br</span>
+              <span class="weight">79.904</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Krypton</span>
+              <span class="number">36</span>
+              <span class="symbol">Kr</span>
+              <span class="weight">83.798</span>
+            </div>
+          </div>
+          <h3 id="horizontal">Horizontal</h3>
+          <p>Magnet lays out items horizontally. Horizontal layout modes need the container to have a height value:</p>
+<div class="highlight"><pre><span class="o">//</span><span class="nt">Both</span> <span class="nt">are</span> <span class="nt">valid</span> <span class="nt">values</span>
+<span class="nc">.grid</span> <span class="p">{</span> <span class="k">height</span><span class="o">:</span> <span class="m">50%</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.grid</span> <span class="p">{</span> <span class="k">height</span><span class="o">:</span> <span class="m">500px</span><span class="p">;</span> <span class="p">}</span>
+</pre></div>
+          <div class="periodic-table layout-mode-horizontal">
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Hydrogenium</span>
+              <span class="number">1</span>
+              <span class="symbol">H</span>
+              <span class="weight">1.008</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Helium</span>
+              <span class="number">2</span>
+              <span class="symbol">He</span>
+              <span class="weight">4.002</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Lithium</span>
+              <span class="number">3</span>
+              <span class="symbol">Li</span>
+              <span class="weight">6.94</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Beryllium</span>
+              <span class="number">4</span>
+              <span class="symbol">Be</span>
+              <span class="weight">9.012</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Borium</span>
+              <span class="number">5</span>
+              <span class="symbol">B</span>
+              <span class="weight">10.81</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Carbonium</span>
+              <span class="number">6</span>
+              <span class="symbol">C</span>
+              <span class="weight">12.011</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Nitrogenium</span>
+              <span class="number">7</span>
+              <span class="symbol">N</span>
+              <span class="weight">14.007</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Oxygenium</span>
+              <span class="number">8</span>
+              <span class="symbol">O</span>
+              <span class="weight">15.999</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Fluorum</span>
+              <span class="number">9</span>
+              <span class="symbol">F</span>
+              <span class="weight">18.998</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Neon</span>
+              <span class="number">10</span>
+              <span class="symbol">Ne</span>
+              <span class="weight">20.179</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Natrium</span>
+              <span class="number">11</span>
+              <span class="symbol">Na</span>
+              <span class="weight">22.989</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Magnesium</span>
+              <span class="number">12</span>
+              <span class="symbol">Mg</span>
+              <span class="weight">24.305</span>
+            </div>
+            <div class="element post-transition metal" data-category="post-transition">
+              <span class="name">Aluminium</span>
+              <span class="number">13</span>
+              <span class="symbol">Al</span>
+              <span class="weight">26.981</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Silicium</span>
+              <span class="number">14</span>
+              <span class="symbol">Si</span>
+              <span class="weight">28.085</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Phosphorus</span>
+              <span class="number">15</span>
+              <span class="symbol">P</span>
+              <span class="weight">30.973</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Sulphur</span>
+              <span class="number">16</span>
+              <span class="symbol">S</span>
+              <span class="weight">32.06</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Chlorum</span>
+              <span class="number">17</span>
+              <span class="symbol">Cl</span>
+              <span class="weight">35.45</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Argon</span>
+              <span class="number">18</span>
+              <span class="symbol">Ar</span>
+              <span class="weight">39.948</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Kalium</span>
+              <span class="number">19</span>
+              <span class="symbol">K</span>
+              <span class="weight">39.098</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Calcium</span>
+              <span class="number">20</span>
+              <span class="symbol">Ca</span>
+              <span class="weight">40.078</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Scandium</span>
+              <span class="number">21</span>
+              <span class="symbol">Sc</span>
+              <span class="weight">44.955</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Titanium</span>
+              <span class="number">22</span>
+              <span class="symbol">Ti</span>
+              <span class="weight">47.867</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Vanadium</span>
+              <span class="number">23</span>
+              <span class="symbol">V</span>
+              <span class="weight">50.941</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Chromium</span>
+              <span class="number">24</span>
+              <span class="symbol">Cr</span>
+              <span class="weight">51.996</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Manganum</span>
+              <span class="number">25</span>
+              <span class="symbol">Mn</span>
+              <span class="weight">54.938</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Ferrum</span>
+              <span class="number">26</span>
+              <span class="symbol">Fe</span>
+              <span class="weight">55.845</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Cobaltum</span>
+              <span class="number">27</span>
+              <span class="symbol">Co</span>
+              <span class="weight">58.933</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Niccolum</span>
+              <span class="number">28</span>
+              <span class="symbol">Ni</span>
+              <span class="weight">58.693</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Cuprum</span>
+              <span class="number">29</span>
+              <span class="symbol">Cu</span>
+              <span class="weight">63.546</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Zincum</span>
+              <span class="number">30</span>
+              <span class="symbol">Zn</span>
+              <span class="weight">65.38</span>
+            </div>
+            <div class="element post-transition metal" data-category="post-transition">
+              <span class="name">Gallium</span>
+              <span class="number">31</span>
+              <span class="symbol">Ga</span>
+              <span class="weight">69.723</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Germanium</span>
+              <span class="number">32</span>
+              <span class="symbol">Ge</span>
+              <span class="weight">72.63</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Arsenicum</span>
+              <span class="number">33</span>
+              <span class="symbol">As</span>
+              <span class="weight">74.921</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Selenium</span>
+              <span class="number">34</span>
+              <span class="symbol">Se</span>
+              <span class="weight">78.971</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Bromum</span>
+              <span class="number">35</span>
+              <span class="symbol">Br</span>
+              <span class="weight">79.904</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Krypton</span>
+              <span class="number">36</span>
+              <span class="symbol">Kr</span>
+              <span class="weight">83.798</span>
+            </div>
+          </div>
+          <h3 id="vertical">Vertical</h3>
+          <p>Magnet lays out items vertically.</p>
+          <div class="periodic-table layout-mode-vertical">
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Hydrogenium</span>
+              <span class="number">1</span>
+              <span class="symbol">H</span>
+              <span class="weight">1.008</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Helium</span>
+              <span class="number">2</span>
+              <span class="symbol">He</span>
+              <span class="weight">4.002</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Lithium</span>
+              <span class="number">3</span>
+              <span class="symbol">Li</span>
+              <span class="weight">6.94</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Beryllium</span>
+              <span class="number">4</span>
+              <span class="symbol">Be</span>
+              <span class="weight">9.012</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Borium</span>
+              <span class="number">5</span>
+              <span class="symbol">B</span>
+              <span class="weight">10.81</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Carbonium</span>
+              <span class="number">6</span>
+              <span class="symbol">C</span>
+              <span class="weight">12.011</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Nitrogenium</span>
+              <span class="number">7</span>
+              <span class="symbol">N</span>
+              <span class="weight">14.007</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Oxygenium</span>
+              <span class="number">8</span>
+              <span class="symbol">O</span>
+              <span class="weight">15.999</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Fluorum</span>
+              <span class="number">9</span>
+              <span class="symbol">F</span>
+              <span class="weight">18.998</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Neon</span>
+              <span class="number">10</span>
+              <span class="symbol">Ne</span>
+              <span class="weight">20.179</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Natrium</span>
+              <span class="number">11</span>
+              <span class="symbol">Na</span>
+              <span class="weight">22.989</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Magnesium</span>
+              <span class="number">12</span>
+              <span class="symbol">Mg</span>
+              <span class="weight">24.305</span>
+            </div>
+            <div class="element post-transition metal" data-category="post-transition">
+              <span class="name">Aluminium</span>
+              <span class="number">13</span>
+              <span class="symbol">Al</span>
+              <span class="weight">26.981</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Silicium</span>
+              <span class="number">14</span>
+              <span class="symbol">Si</span>
+              <span class="weight">28.085</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Phosphorus</span>
+              <span class="number">15</span>
+              <span class="symbol">P</span>
+              <span class="weight">30.973</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Sulphur</span>
+              <span class="number">16</span>
+              <span class="symbol">S</span>
+              <span class="weight">32.06</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Chlorum</span>
+              <span class="number">17</span>
+              <span class="symbol">Cl</span>
+              <span class="weight">35.45</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Argon</span>
+              <span class="number">18</span>
+              <span class="symbol">Ar</span>
+              <span class="weight">39.948</span>
+            </div>
+            <div class="element alkali metal" data-category="alkali">
+              <span class="name">Kalium</span>
+              <span class="number">19</span>
+              <span class="symbol">K</span>
+              <span class="weight">39.098</span>
+            </div>
+            <div class="element alkaline-earth metal" data-category="alkaline-earth">
+              <span class="name">Calcium</span>
+              <span class="number">20</span>
+              <span class="symbol">Ca</span>
+              <span class="weight">40.078</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Scandium</span>
+              <span class="number">21</span>
+              <span class="symbol">Sc</span>
+              <span class="weight">44.955</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Titanium</span>
+              <span class="number">22</span>
+              <span class="symbol">Ti</span>
+              <span class="weight">47.867</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Vanadium</span>
+              <span class="number">23</span>
+              <span class="symbol">V</span>
+              <span class="weight">50.941</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Chromium</span>
+              <span class="number">24</span>
+              <span class="symbol">Cr</span>
+              <span class="weight">51.996</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Manganum</span>
+              <span class="number">25</span>
+              <span class="symbol">Mn</span>
+              <span class="weight">54.938</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Ferrum</span>
+              <span class="number">26</span>
+              <span class="symbol">Fe</span>
+              <span class="weight">55.845</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Cobaltum</span>
+              <span class="number">27</span>
+              <span class="symbol">Co</span>
+              <span class="weight">58.933</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Niccolum</span>
+              <span class="number">28</span>
+              <span class="symbol">Ni</span>
+              <span class="weight">58.693</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Cuprum</span>
+              <span class="number">29</span>
+              <span class="symbol">Cu</span>
+              <span class="weight">63.546</span>
+            </div>
+            <div class="element transition metal" data-category="transition">
+              <span class="name">Zincum</span>
+              <span class="number">30</span>
+              <span class="symbol">Zn</span>
+              <span class="weight">65.38</span>
+            </div>
+            <div class="element post-transition metal" data-category="post-transition">
+              <span class="name">Gallium</span>
+              <span class="number">31</span>
+              <span class="symbol">Ga</span>
+              <span class="weight">69.723</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Germanium</span>
+              <span class="number">32</span>
+              <span class="symbol">Ge</span>
+              <span class="weight">72.63</span>
+            </div>
+            <div class="element metalloid" data-category="metalloid">
+              <span class="name">Arsenicum</span>
+              <span class="number">33</span>
+              <span class="symbol">As</span>
+              <span class="weight">74.921</span>
+            </div>
+            <div class="element non-metal nonmetal" data-category="nonmetal">
+              <span class="name">Selenium</span>
+              <span class="number">34</span>
+              <span class="symbol">Se</span>
+              <span class="weight">78.971</span>
+            </div>
+            <div class="element halogen nonmetal" data-category="halogen">
+              <span class="name">Bromum</span>
+              <span class="number">35</span>
+              <span class="symbol">Br</span>
+              <span class="weight">79.904</span>
+            </div>
+            <div class="element noble-gas nonmetal" data-category="noble-gas">
+              <span class="name">Krypton</span>
+              <span class="number">36</span>
+              <span class="symbol">Kr</span>
+              <span class="weight">83.798</span>
+            </div>
+          </div>
+        </article>
+        <nav class="col-md-3 sidebar" id="sidebar">
+                        <ul class="nav sticky-top flex-column">
+          
+            <li class="nav-item">
+              <a class="nav-link" href="../getting-started">Getting Started</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../filter">Filter</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../sort">Sort</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link active" href="../layout-modes">Layout Modes</a>
+              <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="#grid">Grid</a></li>
+                <li class="nav-item"><a class="nav-link" href="#rows">Rows</a></li>
+                <li class="nav-item"><a class="nav-link" href="#columns">Columns</a></li>
+                <li class="nav-item"><a class="nav-link" href="#horizontal">Horizontal</a></li>
+                <li class="nav-item"><a class="nav-link" href="#vertical">Vertical</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../events">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../methods">Methods</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../options">Options</a>
+            </li>
+          </ul></nav>
+      </div>
+    </div>
+  </main>
+  <script src="/assets/js/jquery-3.2.0.min.js"></script>
+        <script src="/assets/js/tether.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>
+        <script src="/assets/js/magnet.min.js"></script>
+        <script src="/assets/js/magnet-docs.min.js"></script>
+        <script src="/assets/js/application.js"></script>
+        <footer class="site-footer text-muted">
+            <div class="container">
+                <p>Currently v.2.0.0</p>
+                <p>Designed &amp; Developed by Jon Pariente</p>
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> PRNT. All rights reserved.</p>
+            </div>
+        </footer>
+</body>
+</html>
