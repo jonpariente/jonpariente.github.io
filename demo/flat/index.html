@@ -1,66 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Demo - Flat | PRNT</title>
-        <link rel="stylesheet" href="/assets/css/style.css">
-        <link rel="stylesheet" href="/assets/css/flat-demo.css">
-    </head>
-    <body class="demo flat-demo">
-        <main>
-            <div class="container py-1">
-                <section class="row">
-                    <div class="col-md-12">
-                    </div>
-                </section>
-                <section class="d-flex justify-content-between" id="examples">
-                    <div>
-                        <h6 class="text-uppercase">Style</h6>
-                        <div class="btn-group style-group m-b-1">
-                            <button class="btn btn-outline-secondary active">Simple</button>
-                            <button class="btn btn-outline-secondary">Mixed</button>
-                            <button class="btn btn-outline-secondary">Iconic</button>
-                        </div>
-                    </div>
-                    <div>
-                        <h6 class="text-uppercase">Position</h6>
-                        <div class="btn-group position-group m-b-1">
-                            <button class="btn btn-outline-secondary active">Top</button>
-                            <button class="btn btn-outline-secondary">Bottom</button>
-                        </div>
-                    </div>
-                    <div>
-                        <h6 class="text-uppercase">Display</h6>
-                        <div class="btn-group display-group m-b-1">
-                            <button class="btn btn-outline-secondary active">Navbar</button>
-                            <button class="btn btn-outline-secondary">Off canvas</button>
-                        </div>
-                    </div>
-                    <div>
-                        <h6 class="text-uppercase">Color</h6>
-                        <div class="btn-group color-group">
-                            <button class="btn btn-outline-secondary active">Default</button>
-                            <button class="btn btn-outline-secondary">Inverse</button>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="container">
-                <iframe class="demo-example" src="simple.html"></iframe>
-            </div>
-        </main>
-        <footer class="site-footer">
-            <div class="container text-center">
-                <p>Currently v.2.1.0.</p>
-                <p>Designed &amp; Developed by Jon Pariente</p>
-                <p>&copy;
-                    <script>document.write(new Date().getFullYear())</script> PRNT. All rights reserved.
-                </p>
-            </div>
-        </footer>
-        <script src="/assets/js/jquery-3.2.0.min.js"></script>
-        <script src="/assets/js/flat-demo.js"></script>
-    </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo | Flat - Haundo Design</title>
+  <link rel="stylesheet" href="https://haundodesign.com/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://haundodesign.com/assets/css/style.css">
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="/assets/js/flat-demo.js"></script>
+</head>
+<body class="demo flat-demo">
+  <header>
+    <!-- <nav class="navbar navbar-full">
+      <div class="container">
+        <a class="navbar-brand" href="#">Haundo Design</a>
+        <ul class="nav navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Documentation</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-primary" href="#">Buy</a>
+          </li>
+        </ul>
+      </div>
+    </nav> -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-3">Flat</h1>
+        <p class="lead">Flat is a flat-styled Bootstrap responsive navbar that includes submenus and off canvas menu.</p>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <section class="row m-b-1">
+        <div class="col-md-3">
+          <h6 class="text-uppercase">Style:</h6>
+          <div class="btn-group style-group m-b-1">
+            <button class="btn btn-link active">Simple</button>
+            <button class="btn btn-link">Mixed</button>
+            <button class="btn btn-link">Iconic</button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <h6 class="text-uppercase">Position:</h6>
+          <div class="btn-group position-group m-b-1">
+            <button class="btn btn-link active">Top</button>
+            <button class="btn btn-link">Bottom</button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <h6 class="text-uppercase">Display:</h6>
+          <div class="btn-group display-group m-b-1">
+            <button class="btn btn-link active">Navbar</button>
+            <button class="btn btn-link">Off canvas</button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <h6 class="text-uppercase">Color:</h6>
+          <div class="btn-group color-group">
+            <button class="btn btn-link active">Default</button>
+            <button class="btn btn-link">Inverse</button>
+          </div>
+        </div>
+      </section>
+      <section class="row">
+        <div class="col-md-12">
+          <iframe class="demo-example" src="simple.html"></iframe>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <p class="m-b-0">Designed &amp; Developed by Haundo Design.</p>
+      <p class="m-b-0">Currently v.2.1.0.</p>
+      <p class="m-b-0">&copy; 2016 Haundo Design.</p>
+    </div>
+  </footer>
+</body>
 </html>
